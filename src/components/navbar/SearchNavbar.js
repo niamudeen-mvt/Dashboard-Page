@@ -11,16 +11,17 @@ const SearchNavbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
-          {/* ================ filter component ============= */}
-          <div className='ms-auto mb-2 mb-lg-0'>
-            <select className='filter_section px-4 border_radius_12 sf_pro_text'>
-              <option hidden>Filter</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0  filter_section px-4 border_radius_12 sf_pro_text d-flex justify-content-center align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                {"Filter "}
+              </a>
+              {/* <ul class="dropdown-menu mt-2">
+                <li><a class="dropdown-item" href="#">Test 1</a></li>
+                <li><a class="dropdown-item" href="#">Test 2</a></li>
+              </ul> */}
+            </li>
+          </ul>
 
           {/* =============== search component ================+ */}
           <form role="search">

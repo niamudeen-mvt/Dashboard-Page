@@ -54,6 +54,15 @@ input {
   letter-spacing: 0em;
   text-align: left;
 }
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+
 .hide {
   display: none;
 }
@@ -111,14 +120,14 @@ input {
 }
 .navbar .input_section {
   border: 1px solid #8c8c8c;
-  max-width: 494.08px;
+  width: 494.08px;
   min-height: 56px;
   background-color: #ffffff;
 }
 .navbar .filter_section {
   background-color: white;
   border: 1px solid #eaeaea;
-  max-width: 136.25px;
+  /* max-width: 136.25px; */
   height: 54px;
   font-size: 14px;
   font-weight: 500;
@@ -189,14 +198,9 @@ input {
 }
 
 /* ============ table ===================== */
-
-.custom_table {
-  border-radius: 16px !important;
-  -webkit-border-radius: 16px !important;
-  -moz-border-radius: 16px !important;
-  -ms-border-radius: 16px !important;
-  -o-border-radius: 16px !important;
-}
+/* .custom_table_section .table {
+  padding: 8px !important;
+} */
 
 .coloumn_headings {
   font-size: 12px;
@@ -226,12 +230,10 @@ input {
 .status_badge_ongoing {
   width: 89px;
   height: 27px;
-  padding: 9px, 18px, 9px, 18px;
   background-color: #e3ffbf !important;
 }
 .status_badge_paused {
   width: 78px;
-  padding: 9px, 18px, 9px, 18px;
   height: 27px;
   background-color: #eaeaea !important;
 }

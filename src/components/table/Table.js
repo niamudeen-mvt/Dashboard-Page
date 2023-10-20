@@ -1,15 +1,15 @@
 import React from 'react'
-import { Table, Row, Col } from 'reactstrap'
+import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { campaignColumnData, campaignRowData } from '../../data/campaign-data'
-import useWindowSize from '../../hooks/useWindowSize'
+// import useWindowSize from '../../hooks/useWindowSize'
 import Pagination from '../pagination/Pagination'
 
 const CustomTable = () => {
-  const windowSize = useWindowSize()
+  // const windowSize = useWindowSize()
   return (
-    <>
-      <Table responsive className='custom_table'>
+    <div className='custom_table_section'>
+      <Table responsive >
         <thead>
           <tr>
             {
@@ -46,7 +46,7 @@ const CustomTable = () => {
                       {row?.storeName}
                     </td>
                     <td >
-                      <p className={row?.status == "On Going" ? 'campaign_status sf_pro_text status_badge_ongoing d-flex justify-content-center align-items-center border_radius_12' : 'campaign_status sf_pro_text status_badge_paused d-flex justify-content-center align-items-center border_radius_12'}>
+                      <p className={row?.status == "On Going" ? 'campaign_status sf_pro_text status_badge_ongoing d-flex justify-content-center align-items-center border_radius_12 mt-2' : 'campaign_status sf_pro_text status_badge_paused d-flex justify-content-center align-items-center border_radius_12 mt-2'}>
                         {row?.status}
                       </p>
                     </td>
@@ -72,7 +72,7 @@ const CustomTable = () => {
         </tbody>
       </Table>
       <Pagination />
-    </>
+    </div>
   )
 }
 
