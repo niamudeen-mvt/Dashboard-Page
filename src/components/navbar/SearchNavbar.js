@@ -11,7 +11,7 @@ const SearchNavbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className='ms-auto mb-2 mb-lg-0'>
-            <select className='filter_section px-4'>
+            <select className='filter_section px-4 border_radius_12 sf_pro_text'>
               <option hidden>Filter</option>
               <option>1</option>
               <option>2</option>
@@ -20,7 +20,7 @@ const SearchNavbar = () => {
             </select>
           </div>
           <form role="search">
-            <div className="input_section flex_start px-4" >
+            <div className="input_section d-flex justify-content-start align-items-center px-4 border_radius_12" >
               <span className='mx-2'>
                 <img src={searchIcon} alt='search-icon' />
               </span>

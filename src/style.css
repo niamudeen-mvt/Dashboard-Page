@@ -15,7 +15,6 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 :root {
@@ -71,34 +70,26 @@ input {
 }
 
 /* ============ common classes =========== */
-.flex_SB {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.flex_SBV {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-.flex_center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.flex_start {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-.flex_end {
-  display: flex;
-  justify-content: end;
-  align-items: center;
+
+.border_radius_12 {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
-/* ============ side navigation =============== */
+.sf_pro_font_400 {
+  font-family: SF Pro Display;
+  font-weight: 400;
+  line-height: 24px;
+}
+.sf_pro_text {
+  font-family: SF Pro Text;
+  line-height: 20px;
+}
+
+/* ============ search navbar =============== */
 .navbar {
   background-color: transparent !important;
 }
@@ -115,48 +106,31 @@ input {
   max-width: 494.08px;
   min-height: 56px;
   background-color: #ffffff;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
 .navbar .filter_section {
   background-color: white;
   border: 1px solid #eaeaea;
   max-width: 136.25px;
   height: 54px;
-  font-family: SF Pro Text;
   font-size: 14px;
   font-weight: 500;
-  line-height: 20px;
   text-align: center;
   color: #030303;
   margin-right: 16px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
+
+/* ================ side navigation ============= */
 
 .side_navigaiton_container {
   background-color: var(--side-navigation-color);
-  padding: 0 17px;
 }
 
-.side_navigaiton_container .content_section {
-  height: 100%;
-  padding-top: 60px;
-}
 .side_navigaiton_container .content_section h2 {
-  color: var(--white-color);
   font-family: Inter;
   font-size: 32px;
-  font-style: normal;
   font-weight: 700;
   line-height: 46.6px;
-  margin-bottom: 82.95px;
+  color: var(--white-color);
 }
 
 .side_navigaiton_container .content_section .top_section a:hover,
@@ -167,30 +141,20 @@ input {
   font-weight: 400;
   line-height: 24px;
   color: #6c6c6c !important;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
 
 .side_navigaiton_container .content_section .bottom_section {
   left: 0;
   bottom: 0;
-  width: 100%;
   height: 120px;
-  padding: 37px, 10px, 37px, 10px;
   background-color: white;
 }
-.side_navigaiton_container .content_section .bottom_section button span {
-  margin-right: 20px;
-}
+
 .side_navigaiton_container .content_section .bottom_section button p {
   font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0em;
   color: #02005f;
 }
 
@@ -202,64 +166,39 @@ input {
 /* ============ table ===================== */
 
 .coloumn_headings {
-  font-family: SF Pro Display;
   font-size: 12px;
-  font-weight: 400;
-  line-height: 24px;
   min-width: 150px;
 }
 
 .common_campaign_heading,
 .common_campaign_date_heading {
-  font-family: SF Pro Display;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
 }
 .common_campaign_date_heading {
   color: #bfbfbf !important;
 }
 
-.campaign_status {
-  font-family: SF Pro Text;
+.campaign_status,
+.pagination_section .page_count {
   font-size: 12px;
   font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0px;
 }
 
 .common_campaign_heading .per_month {
-  font-family: SF Pro Display;
   font-size: 8px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 .status_badge_ongoing {
   width: 89px;
   height: 27px;
-  gap: 10px;
   padding: 9px, 18px, 9px, 18px;
   background-color: #e3ffbf !important;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
 .status_badge_paused {
   width: 78px;
   padding: 9px, 18px, 9px, 18px;
   height: 27px;
-  gap: 10px;
   background-color: #eaeaea !important;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
 
 .pagination_section .icon {
@@ -267,12 +206,4 @@ input {
   height: 36px;
   border: 1px solid #babfc3;
   background-color: white;
-}
-.pagination_section .page_count {
-  font-family: SF Pro Text;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0px;
-  text-align: center;
 }

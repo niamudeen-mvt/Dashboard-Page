@@ -19,20 +19,20 @@ const SideNaviagation = ({ isNavOpen }) => {
   }
 
   return (
-    <div className='side_navigaiton_container transition_5s min-vh-100'
+    <div className='side_navigaiton_container transition_5s min-vh-100 px-3'
       style={sideNavigationStyles}
     >
       {
         isNavOpen ?
-          <div className='content_section'>
+          <div className='content_section pt-5'>
             <div className='top_section '>
-              <h2 className="mx-4">Paper Notes</h2>
-              <div className='navigation flex_SBV'>
+              <h2 className="mx-4 mb-5">Paper Notes</h2>
+              <div className='navigation d-flex justify-content-between align-items-center flex-column '>
                 {
                   menuItems?.length ?
                     menuItems.map(menu => {
                       return (
-                        <Link to={menu?.url} key={menu?.id} className={routeName === menu?.url ? 'w-100 py-3 mb-2 text-white flex_start active' : 'w-100 py-3 mb-2 text-white flex_start'}>
+                        <Link to={menu?.url} key={menu?.id} className={routeName === menu?.url ? 'w-100 py-3 mb-2 text-white d-flex justify-content-start align-items-center active border_radius_12' : 'w-100 py-3 mb-2 text-white d-flex justify-content-start align-items-center border_radius_12'}>
                           <span className='mx-4'>
                             <img src={menu.icon} alt='icon' />
                           </span>
@@ -46,9 +46,9 @@ const SideNaviagation = ({ isNavOpen }) => {
                 }
               </div>
             </div>
-            <div className='bottom_section flex_start position-absolute'>
-              <button className='flex_start mx-4'>
-                <span >
+            <div className='bottom_section d-flex justify-content-start align-items-center position-absolute py-5 w-100'>
+              <button className='d-flex justify-content-start align-items-center mx-4'>
+                <span className='mx-3'>
                   <img src={logoutBtn} alt="logoutBtn" />
                 </span>
                 <p >Log Out</p>
