@@ -1,11 +1,14 @@
 import React from 'react'
 import logoutBtn from "../../assets/icons/logout-icon.svg"
 import { menuItems } from '../../menu-items'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 
 const SideNaviagation = ({ isNavOpen }) => {
+
+  const routeName = (useLocation()).pathname
+  console.log(routeName);
 
   const sideNavigationStyles = {
     position: 'absolute',
@@ -23,13 +26,13 @@ const SideNaviagation = ({ isNavOpen }) => {
         isNavOpen ?
           <div className='content_section'>
             <div className='top_section '>
-              <h2 className="mx-4">Paper Notes </h2>
+              <h2 className="mx-4">Paper Notes</h2>
               <div className='navigation flex_SBV'>
                 {
                   menuItems?.length ?
                     menuItems.map(menu => {
                       return (
-                        <Link to={menu?.url} key={menu?.id} className="w-100 py-3 mb-2 text-white flex_start">
+                        <Link to={menu?.url} key={menu?.id} className={routeName === menu?.url ? 'w-100 py-3 mb-2 text-white flex_start active' : 'w-100 py-3 mb-2 text-white flex_start'}>
                           <span className='mx-4'>
                             <img src={menu.icon} alt='icon' />
                           </span>

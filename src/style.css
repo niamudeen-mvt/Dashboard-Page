@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 :root {
@@ -26,6 +27,16 @@ p {
 button {
   border: none;
   background-color: transparent;
+}
+input {
+  border: none;
+  background-color: transparent;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .hide {
   display: none;
@@ -76,6 +87,43 @@ button {
   background-color: transparent !important;
 }
 
+.navbar .navbar-brand {
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+.navbar .input_section {
+  border: 1px solid #8c8c8c;
+  max-width: 494.08px;
+  min-height: 56px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.navbar .filter_section {
+  background-color: white;
+  border: 1px solid #eaeaea;
+  max-width: 136.25px;
+  height: 54px;
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: #030303;
+  margin-right: 16px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
 .side_navigaiton_container {
   background-color: var(--side-navigation-color);
   padding: 0 17px;
@@ -95,7 +143,8 @@ button {
   margin-bottom: 82.95px;
 }
 
-.side_navigaiton_container .content_section .top_section a:hover {
+.side_navigaiton_container .content_section .top_section a:hover,
+.active {
   background-color: var(--white-color);
   font-family: Inter;
   font-size: 14px;

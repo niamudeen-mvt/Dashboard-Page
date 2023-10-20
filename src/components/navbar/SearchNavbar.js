@@ -1,6 +1,8 @@
 import React from 'react'
+import searchIcon from "../../assets/icons/search-icon.svg"
 
 const SearchNavbar = () => {
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
       <div className="container-fluid">
@@ -9,20 +11,22 @@ const SearchNavbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Filter
-              </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
+          <div className='ms-auto mb-2 mb-lg-0'>
+            <select className='filter_section px-4'>
+              <option hidden>Filter</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <form role="search">
+            <div className="input_section flex_start px-4" >
+              <span className='mx-2'>
+                <img src={searchIcon} alt='search-icon' />
+              </span>
+              <input className="mx-2 w-100" type="search" placeholder="Search Campaigns" aria-label="Search" />
+            </div>
           </form>
         </div>
       </div>

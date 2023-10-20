@@ -11,9 +11,6 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
     setIsNavOpen(!isNavOpen)
   }
 
-  const topNavStyles = {
-    minHeight: '86px'
-  }
 
   const mainContainerStyles = {
     position: 'absolute',
@@ -25,7 +22,9 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
   return (
     <div className='min-vh-100 main_container transition_5s' style={mainContainerStyles}>
-      <div className='bg-white flex_SB px-3 mb-3' style={topNavStyles}>
+
+      {/* ============ top nav ================= */}
+      <div className='bg-white flex_SB px-3 mb-3'>
         {
           isNavOpen ?
             <AiOutlineMenu className={window?.innerWidth <= 992 ? 'fs-4 cursor text-white' : 'fs-4 cursor'} onClick={handleToggle} /> :
@@ -37,6 +36,8 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
       </div>
       <Container className=''>
         <SearchNavbar />
+
+        {/* ================== pages data ============== */}
         <div className='mx-5'>
           {children}
         </div>
