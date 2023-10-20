@@ -8,8 +8,11 @@ import { Link } from 'react-router-dom'
 const SideNaviagation = ({ isNavOpen }) => {
 
   const sideNavigationStyles = {
-    width: isNavOpen ? '20%' : '0%',
-    transform: isNavOpen ? 'translateX(0)' : 'translateX(-100%)',
+    position: 'absolute',
+    top: '0',
+    left: isNavOpen ? '0' : '-100%',
+    width: '320px',
+    zIndex: '1'
   }
 
   return (
@@ -18,7 +21,7 @@ const SideNaviagation = ({ isNavOpen }) => {
     >
       {
         isNavOpen ?
-          <div className='content_section' >
+          <div className='content_section'>
             <div className='top_section '>
               <h2 className="mx-4">Paper Notes </h2>
               <div className='navigation flex_SBV'>

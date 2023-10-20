@@ -7,22 +7,28 @@ import SearchNavbar from '../../components/navbar/SearchNavbar'
 const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
   const handleToggle = () => {
+    console.log("clicked")
     setIsNavOpen(!isNavOpen)
   }
 
   const topNavStyles = {
     minHeight: '86px'
   }
+
   const mainContainerStyles = {
-    paddingRight: '16px',
-    width: '100%'
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    width: '100%',
+    paddingLeft: window?.innerWidth <= 992 ? '0' : (isNavOpen ? '320px' : '0')
   }
+
   return (
-    <div className='min-vh-100 main_container' style={mainContainerStyles}>
+    <div className='min-vh-100 main_container transition_5s' style={mainContainerStyles}>
       <div className='bg-white flex_SB px-3 mb-3' style={topNavStyles}>
         {
           isNavOpen ?
-            <AiOutlineMenu className='fs-4 cursor' onClick={handleToggle} /> :
+            <AiOutlineMenu className={window?.innerWidth <= 992 ? 'fs-4 cursor text-white' : 'fs-4 cursor'} onClick={handleToggle} /> :
             <AiOutlineClose className='fs-4 cursor' onClick={handleToggle} />
         }
         <div>

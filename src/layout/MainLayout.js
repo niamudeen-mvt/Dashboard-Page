@@ -17,16 +17,9 @@ const MainLayout = ({ children }) => {
   }, [windowSize?.width])
 
 
-  const mainLayoutStyles = {
-    display: 'flex',
-    width: '100%'
-  }
   return (
-    <div className='min-vh-100' style={mainLayoutStyles}>
-      {/* =========== 20% ============ */}
-      <SideNaviagation isNavOpen={isNavOpen} />
-
-      {/* ============== 80% ========== */}
+    <div className='min-vh-100 position-realtive d-flex w-100' >
+      <SideNaviagation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <MainContainer isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} children={children} />
     </div>
   )
