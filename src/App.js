@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<ProtectedRoute />}>
-          <Route path="campaign-page" element={<CampaignPage />} />
+          <Route path="" element={<CampaignPage />} />
           <Route path="contacts-page" element={<ContactPage />} />
           <Route path="overview-page" element={<OverviewPage />} />
           <Route path="settings-page" element={<SettingsPage />} />

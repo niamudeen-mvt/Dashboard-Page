@@ -8,7 +8,7 @@ export const menuItems = [
   {
     id: 1,
     title: 'Campaign',
-    url: '/campaign-page',
+    url: '/',
     icon: campaignIcon
   },
   {
