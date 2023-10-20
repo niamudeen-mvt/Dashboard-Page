@@ -9,14 +9,14 @@ const CustomTable = () => {
   const windowSize = useWindowSize()
   return (
     <>
-      <Table responsive>
+      <Table responsive className='custom_table'>
         <thead>
           <tr>
             {
               campaignColumnData?.length ?
                 campaignColumnData.map(coloumn => {
                   return (
-                    <th key={coloumn?.id} className={coloumn?.id === 1 ? 'coloumn_headings px-4 sf_pro_font_400' : 'coloumn_headings sf_pro_font_400'}>
+                    <th key={coloumn?.id} className={coloumn?.id === 1 ? 'coloumn_headings sf_pro_font_400' : 'coloumn_headings sf_pro_font_400'}>
                       {coloumn?.title}
                     </th>
                   )
@@ -30,16 +30,22 @@ const CustomTable = () => {
               campaignRowData.map(row => {
                 return (
                   <tr key={row?.id}>
-                    <td className={windowSize?.width <= 1440 ? 'common_campaign_heading sf_pro_font_400 px-3' : 'common_campaign_heading sf_pro_font_400'}>
-                      <span className={windowSize?.width <= 1440 ? 'd-none' : 'mx-3'}>
+                    <td className="common_campaign_heading sf_pro_font_400">
+                      <span className="mx-2 ">
                         <img src={row?.img} alt='campaign-defalut-img' className='img-fluid' />
                       </span>
                       {row?.campaignName}
                     </td>
+                    {/* <td className={windowSize?.width <= 1440 ? 'common_campaign_heading sf_pro_font_400 px-3' : 'common_campaign_heading sf_pro_font_400'}>
+                      <span className={windowSize?.width <= 1440 ? 'd-none' : 'mx-3'}>
+                        <img src={row?.img} alt='campaign-defalut-img' className='img-fluid' />
+                      </span>
+                      {row?.campaignName}
+                    </td> */}
                     <td className='common_campaign_heading sf_pro_font_400'>
                       {row?.storeName}
                     </td>
-                    <td>
+                    <td >
                       <p className={row?.status == "On Going" ? 'campaign_status sf_pro_text status_badge_ongoing d-flex justify-content-center align-items-center border_radius_12' : 'campaign_status sf_pro_text status_badge_paused d-flex justify-content-center align-items-center border_radius_12'}>
                         {row?.status}
                       </p>

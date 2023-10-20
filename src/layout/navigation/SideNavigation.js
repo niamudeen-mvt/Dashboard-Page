@@ -8,15 +8,18 @@ import { Link, useLocation } from 'react-router-dom'
 const SideNaviagation = ({ isNavOpen }) => {
 
   const routeName = (useLocation()).pathname
-  console.log(routeName);
 
   const sideNavigationStyles = {
-    position: 'absolute',
-    top: '0',
-    left: isNavOpen ? '0' : '-100%',
-    width: '320px',
-    zIndex: '1'
+    width: '17%',
   }
+
+  // const sideNavigationStyles = {
+  //   position: 'absolute',
+  //   top: '0',
+  //   left: isNavOpen ? '0' : '-100%',
+  //   width: '320px',
+  //   zIndex: '1',
+  // }
 
   return (
     <div className='side_navigaiton_container transition_5s min-vh-100 px-3'
@@ -46,7 +49,7 @@ const SideNaviagation = ({ isNavOpen }) => {
                 }
               </div>
             </div>
-            <div className='bottom_section d-flex justify-content-start align-items-center position-absolute py-5 w-100'>
+            <div className='bottom_section d-flex justify-content-start align-items-center position-absolute py-5'>
               <button className='d-flex justify-content-start align-items-center mx-4'>
                 <span className='mx-3'>
                   <img src={logoutBtn} alt="logoutBtn" />

@@ -6,26 +6,38 @@ import SearchNavbar from '../../components/navbar/SearchNavbar'
 
 const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
-  const handleToggle = () => {
-    console.log("clicked")
-    setIsNavOpen(!isNavOpen)
-  }
 
 
   const mainContainerStyles = {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    width: '100%',
-    paddingLeft: window?.innerWidth <= 992 ? '0' : (isNavOpen ? '320px' : '0'),
-    paddingRight: '16px'
+    width: '83%',
   }
+  // const handleToggle = () => {
+  //   console.log("clicked")
+  //   setIsNavOpen(!isNavOpen)
+  // }
+
+  // const mainContainerStyles = {
+  //   position: 'absolute',
+  //   top: '0',
+  //   left: '0',
+  //   width: '100%',
+  //   paddingLeft: window?.innerWidth <= 992 ? '0' : (isNavOpen ? '320px' : '0'),
+  //   paddingRight: '16px'
+  // }
 
   return (
-    <div className='min-vh-100 main_container transition_5s' style={mainContainerStyles}>
+    <div className='min-vh-100 main_container transition_5s px-3' style={mainContainerStyles}>
 
       {/* ============ top nav ================= */}
-      <div className='bg-white px-3 mb-3 py-2 d-flex justify-content-between align-items-center'>
+
+      <div className='bg-white px-3 mb-3 py-3 d-flex justify-content-end align-items-center  top_nav'>
+        <div>
+          <img src={userIcon} alt='user-icon' />
+        </div>
+      </div>
+
+
+      {/* <div className='bg-white px-3 mb-3 py-2 d-flex justify-content-between align-items-center'>
         {
           isNavOpen ?
             <AiOutlineMenu className={window?.innerWidth <= 992 ? 'fs-4 cursor text-white' : 'fs-4 cursor'} onClick={handleToggle} /> :
@@ -34,7 +46,7 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
         <div>
           <img src={userIcon} alt='user-icon' />
         </div>
-      </div>
+      </div> */}
       <Container className=''>
         <SearchNavbar />
         {/* ================== pages data ============== */}

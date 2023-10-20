@@ -15,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 :root {
@@ -123,6 +124,8 @@ input {
 
 .side_navigaiton_container {
   background-color: var(--side-navigation-color);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .side_navigaiton_container .content_section h2 {
@@ -146,8 +149,10 @@ input {
 .side_navigaiton_container .content_section .bottom_section {
   left: 0;
   bottom: 0;
+  width: 320px;
   height: 120px;
   background-color: white;
+  border-bottom-right-radius: 20px;
 }
 
 .side_navigaiton_container .content_section .bottom_section button p {
@@ -162,17 +167,31 @@ input {
 .main_container {
   background-color: var(--soft-blue-theme);
 }
+.main_container .top_nav {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
 
 /* ============ table ===================== */
+
+.custom_table {
+  border-radius: 16px !important;
+  -webkit-border-radius: 16px !important;
+  -moz-border-radius: 16px !important;
+  -ms-border-radius: 16px !important;
+  -o-border-radius: 16px !important;
+}
 
 .coloumn_headings {
   font-size: 12px;
   min-width: 150px;
+  padding: 20px !important;
 }
 
 .common_campaign_heading,
 .common_campaign_date_heading {
   font-size: 14px;
+  padding: 13px 20px !important;
 }
 .common_campaign_date_heading {
   color: #bfbfbf !important;
