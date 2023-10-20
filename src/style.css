@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Urbanist:wght@500;600;700;800&display=swap");
+
+@font-face {
+  font-family: SF Pro Display;
+  src: url("./assets/fonts/SF_Pro-Display-Font-Family/SFPRODISPLAYREGULAR.OTF");
+}
+
+@font-face {
+  font-family: SF Pro Text;
+  src: url("./assets/fonts/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +22,10 @@
   --white-color: #ffffff;
   --side-navigation-color: #003848;
   --soft-blue-theme: #f4f9ff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
 }
 
 /* =========== default setting =========== */
@@ -193,11 +209,15 @@ input {
   min-width: 150px;
 }
 
-.common_campaign_heading {
+.common_campaign_heading,
+.common_campaign_date_heading {
   font-family: SF Pro Display;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+}
+.common_campaign_date_heading {
+  color: #bfbfbf !important;
 }
 
 .campaign_status {
@@ -208,7 +228,7 @@ input {
   letter-spacing: 0px;
 }
 
-.campaign_name .per_month {
+.common_campaign_heading .per_month {
   font-family: SF Pro Display;
   font-size: 8px;
   font-weight: 400;
@@ -240,4 +260,19 @@ input {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
+}
+
+.pagination_section .icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #babfc3;
+  background-color: white;
+}
+.pagination_section .page_count {
+  font-family: SF Pro Text;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
 }

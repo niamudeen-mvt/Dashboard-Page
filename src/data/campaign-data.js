@@ -1,5 +1,7 @@
 
 import campaignDefaultImg from "../assets/images/campaign-default-img.png"
+import campaignShadowImg from "../assets/images/campaign-img.png"
+
 
 export const campaignColumnData = [
   {
@@ -47,7 +49,7 @@ export const campaignRowData = [
   },
   {
     id: 2,
-    img: campaignDefaultImg,
+    img: campaignShadowImg,
     campaignName: 'Happy Birthday',
     storeName: 'Simmon',
     status: 'Paused',
@@ -69,7 +71,7 @@ export const campaignRowData = [
   },
   {
     id: 4,
-    img: campaignDefaultImg,
+    img: campaignShadowImg,
     campaignName: 'Our New Product',
     storeName: 'Nevada',
     status: 'On Going',

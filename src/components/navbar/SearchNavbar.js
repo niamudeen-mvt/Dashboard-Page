@@ -2,7 +2,6 @@ import React from 'react'
 import searchIcon from "../../assets/icons/search-icon.svg"
 
 const SearchNavbar = () => {
-
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
       <div className="container-fluid">

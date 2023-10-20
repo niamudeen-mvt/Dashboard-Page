@@ -24,7 +24,7 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
     <div className='min-vh-100 main_container transition_5s' style={mainContainerStyles}>
 
       {/* ============ top nav ================= */}
-      <div className='bg-white flex_SB px-3 mb-3'>
+      <div className='bg-white flex_SB px-3 mb-3 py-2'>
         {
           isNavOpen ?
             <AiOutlineMenu className={window?.innerWidth <= 992 ? 'fs-4 cursor text-white' : 'fs-4 cursor'} onClick={handleToggle} /> :
@@ -36,13 +36,12 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
       </div>
       <Container className=''>
         <SearchNavbar />
-
         {/* ================== pages data ============== */}
-        <div className='mx-5'>
+        <section className='mx-5'>
           {children}
-        </div>
+        </section>
       </Container>
-    </div>
+    </div >
   )
 }
 
