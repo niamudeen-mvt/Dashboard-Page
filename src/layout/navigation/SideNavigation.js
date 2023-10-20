@@ -32,7 +32,7 @@ const SideNaviagation = ({ isNavOpen }) => {
                   menuItems?.length ?
                     menuItems.map(menu => {
                       return (
-                        <Link to={menu?.url} key={menu?.id} className={routeName === menu?.url ? 'w-100 py-3 mb-2 text-white d-flex justify-content-start align-items-center active border_radius_12' : 'w-100 py-3 mb-2 text-white d-flex justify-content-start align-items-center border_radius_12'}>
+                        <Link to={menu?.url} key={menu?.id} className={routeName === menu?.url ? 'w-100 py-3 mb-3 text-white d-flex justify-content-start align-items-center active border_radius_12' : 'w-100 py-3 mb-3 text-white d-flex justify-content-start align-items-center border_radius_12'}>
                           <span className='mx-4'>
                             <img src={menu.icon} alt='icon' />
                           </span>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const SettingsPage = () => {
   return (
-    <div className='common_section'>
+    <div>
       SettingsPage
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 const OverviewPage = () => {
   return (
-    <div className='common_section'>
+    <div >
       OverviewPage
     </div>
   )

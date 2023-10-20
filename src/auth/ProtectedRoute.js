@@ -1,9 +1,13 @@
 import React from 'react'
-import MainLayout from '../layout/MainLayout'
+import MainLayout from '../layout/index'
 import { Outlet } from 'react-router-dom'
 
 const ProtectedRoute = ({ children }) => {
+
+  // consider user is login
   let isAuthenticated = true
+
+
   return (
     <>
       {
