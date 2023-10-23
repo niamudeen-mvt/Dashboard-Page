@@ -114,3 +114,124 @@ export const campaignRowData = [
     action: 'Details'
   },
 ]
+
+
+export const campaignDetailColumnsData = [
+  {
+    id: 1,
+    title: 'Campaign Name'
+  },
+  {
+    id: 2,
+    title: 'Store name'
+  },
+  {
+    id: 3,
+    title: 'Budget'
+  },
+  {
+    id: 4,
+    title: 'Spent'
+  },
+  {
+    id: 5,
+    title: 'Start Date'
+  },
+  {
+    id: 6,
+    title: 'Stop Date'
+  },
+  {
+    id: 7,
+    title: 'Status'
+  },
+
+]
+
+
+export const customerList = [
+  {
+    id: 1,
+    name: 'Cody'
+  },
+  {
+    id: 2,
+    name: 'Simon'
+  },
+  {
+    id: 3,
+    name: 'Oregon'
+  },
+  {
+    id: 4,
+    name: 'Nevada'
+  },
+  {
+    id: 5,
+    name: 'Howard'
+  },
+  {
+    id: 6,
+    name: 'Mc coy'
+  },
+  {
+    id: 7,
+    name: 'Simmon'
+  },
+  {
+    id: 8,
+    name: 'Oregon'
+  },
+  {
+    id: 9,
+    name: 'Cody'
+  },
+  {
+    id: 10,
+    name: 'Simmon'
+  },
+  {
+    id: 11,
+    name: 'Oregon'
+  },
+  {
+    id: 12,
+    name: 'Nevada'
+  },
+  {
+    id: 13,
+    name: 'Howard'
+  },
+  {
+    id: 14,
+    name: 'Mc coy'
+  },
+  {
+    id: 15,
+    name: 'Cody'
+  },
+  {
+    id: 16,
+    name: 'Simmon'
+  },
+  {
+    id: 17,
+    name: 'Oregon'
+  },
+  {
+    id: 18,
+    name: 'Nevada'
+  },
+  {
+    id: 19,
+    name: 'Howard'
+  },
+  {
+    id: 20,
+    name: 'Mc coy'
+  },
+  {
+    id: 21,
+    name: 'Weeb'
+  },
+]

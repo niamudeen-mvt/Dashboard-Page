@@ -2,10 +2,13 @@ import React from 'react'
 import userIcon from "../../assets/icons/user-icon.svg"
 import { Container } from 'reactstrap'
 import SearchNavbar from '../../components/navbar/SearchNavbar'
+import { useLocation } from 'react-router-dom'
 // import menuIcon from "../../assets/icons/menu-icon.svg"
 // import closeIcon from "../../assets/icons/close-icon.svg"
 
 const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
+
+  const routeName = useLocation()?.pathname
 
 
 
@@ -54,7 +57,9 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
 
       <Container className='container'>
-        <SearchNavbar />
+        {
+          routeName === "/" ? <SearchNavbar /> : null}
+
         {/* ================== pages data ============== */}
         <section className='mx-5'>
           {children}
