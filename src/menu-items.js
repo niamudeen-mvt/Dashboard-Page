@@ -10,7 +10,7 @@ export const menuItems = [
     id: 1,
     title: 'Campaign',
     url: '/',
-    subUrl: '/campaign-detail',
+    subUrl: 'campaign-detail',
     icon: campaignIcon,
     activeIcon: campaignActiveIcon
   },

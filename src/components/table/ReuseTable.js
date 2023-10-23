@@ -17,7 +17,7 @@ const ResuseTable = ({ rowData, coloumnData }) => {
                   coloumnData.map(coloumn => {
                     return (
                       <th key={coloumn?.id} className={coloumn?.id === 1 ? 'coloumn_headings  sf_pro_font_400' : 'coloumn_headings sf_pro_font_400'} style={{
-                        minWidth: coloumn?.id === 1 ? '300.9px' : (coloumn?.id === 2 ? '142px' : coloumn?.id === 3 ? '183.45px' : coloumn?.id === 7 ? '212px' : '161px')
+                        minWidth: coloumn?.id === 1 ? '247px' : (coloumn?.id === 2 ? '220px' : coloumn?.id === 7 ? '180px' : '162px')
                       }} >
                         {coloumn?.title}
                       </th>
