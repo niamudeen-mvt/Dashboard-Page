@@ -6,7 +6,6 @@ import ContactPage from './pages/ContactPage'
 import OverviewPage from './pages/OverviewPage'
 import SettingsPage from './pages/SettingsPage'
 
-// comment added =================
 
 const App = () => {
   return (
