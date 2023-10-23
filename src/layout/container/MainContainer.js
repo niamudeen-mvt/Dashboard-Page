@@ -1,8 +1,9 @@
 import React from 'react'
 import userIcon from "../../assets/icons/user-icon.svg"
 import { Container } from 'reactstrap'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import SearchNavbar from '../../components/navbar/SearchNavbar'
+// import menuIcon from "../../assets/icons/menu-icon.svg"
+// import closeIcon from "../../assets/icons/close-icon.svg"
 
 const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
@@ -29,7 +30,6 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
     <div className='min-vh-100 main_container transition_5s px-3' style={mainContainerStyles}>
 
       {/* ============ top nav ================= */}
-
       <div className='bg-white px-3 mb-3 py-3 d-flex justify-content-end align-items-center  top_nav'>
         <div>
           <img src={userIcon} alt='user-icon' />
@@ -40,13 +40,19 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
       {/* <div className='bg-white px-3 mb-3 py-2 d-flex justify-content-between align-items-center'>
         {
           isNavOpen ?
-            <AiOutlineMenu className={window?.innerWidth <= 992 ? 'fs-4 cursor text-white' : 'fs-4 cursor'} onClick={handleToggle} /> :
-            <AiOutlineClose className='fs-4 cursor' onClick={handleToggle} />
+            <span className={window?.innerWidth <= 992 ? 'fs-4 cursor text-white' : 'fs-4 cursor'} onClick={handleToggle}>
+              <img src={menuIcon} alt='menu-icon' />
+            </span> :
+            <span className='fs-4 cursor' onClick={handleToggle} >
+              <img src={closeIcon} alt='menu-icon' />
+            </span>
         }
         <div>
           <img src={userIcon} alt='user-icon' />
         </div>
       </div> */}
+
+
       <Container className='container'>
         <SearchNavbar />
         {/* ================== pages data ============== */}
