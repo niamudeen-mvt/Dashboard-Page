@@ -9,8 +9,6 @@ const SideNaviagation = ({ isNavOpen }) => {
 
   const routeName = (useLocation()).pathname
 
-  console.log(routeName, "routename");
-
   const sideNavigationStyles = {
     width: '17%',
   }
@@ -24,7 +22,7 @@ const SideNaviagation = ({ isNavOpen }) => {
   // }
 
   return (
-    <div className='side_navigaiton_container transition_5s min-vh-100 px-3'
+    <div className='side_navigaiton_container transition_5s min-vh-100 px-3 position-relative'
       style={sideNavigationStyles}
     >
       {
