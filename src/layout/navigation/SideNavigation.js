@@ -11,6 +11,7 @@ const SideNaviagation = ({ isNavOpen }) => {
 
   const sideNavigationStyles = {
     width: '17%',
+    marginBottom: '4px'
   }
 
   // const sideNavigationStyles = {
@@ -22,7 +23,7 @@ const SideNaviagation = ({ isNavOpen }) => {
   // }
 
   return (
-    <div className='side_navigaiton_container transition_5s min-vh-100 px-3 position-relative'
+    <div className='side_navigaiton_container transition_5s min-vh-96 px-3 position-relative'
       style={sideNavigationStyles}
     >
       {
@@ -60,9 +61,9 @@ const SideNaviagation = ({ isNavOpen }) => {
             <div className='bottom_section d-flex justify-content-start align-items-center position-absolute py-5'>
               <button className='d-flex justify-content-start align-items-center mx-4'>
                 <span className='mx-3'>
-                  <img src={logoutBtn} alt="logoutBtn" />
+                  <img src={logoutBtn} alt="logout-btn-icon" />
                 </span>
-                <p >Log Out</p>
+                <p>Log Out</p>
               </button>
             </div>
           </div > : null
