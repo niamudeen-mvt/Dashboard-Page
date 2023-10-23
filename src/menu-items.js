@@ -1,4 +1,5 @@
-import campaignIcon from "./assets/icons/campaign-icon.svg"
+import campaignIcon from "./assets/icons/campaign-white-icon.svg"
+import campaignActiveIcon from "./assets/icons/campaign-icon.svg"
 import contactIcon from "./assets/icons/contacts-icon.svg"
 import overViewIcon from "./assets/icons/overview-icon.svg"
 import settingIcon from "./assets/icons/setting-icon.svg"
@@ -9,7 +10,8 @@ export const menuItems = [
     id: 1,
     title: 'Campaign',
     url: '/',
-    icon: campaignIcon
+    icon: campaignIcon,
+    activeIcon: campaignActiveIcon
   },
   {
     id: 2,

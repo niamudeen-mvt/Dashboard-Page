@@ -47,7 +47,7 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
           <img src={userIcon} alt='user-icon' />
         </div>
       </div> */}
-      <Container className=''>
+      <Container className='container'>
         <SearchNavbar />
         {/* ================== pages data ============== */}
         <section className='mx-5'>

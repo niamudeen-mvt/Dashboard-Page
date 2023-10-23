@@ -1,13 +1,15 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import logoutBtn from "../../assets/icons/logout-icon.svg"
 import { menuItems } from '../../menu-items'
-import { Link, useLocation } from 'react-router-dom'
 
 
 
 const SideNaviagation = ({ isNavOpen }) => {
 
   const routeName = (useLocation()).pathname
+
+  console.log(routeName, "routename");
 
   const sideNavigationStyles = {
     width: '17%',
@@ -35,14 +37,22 @@ const SideNaviagation = ({ isNavOpen }) => {
                   menuItems?.length ?
                     menuItems.map(menu => {
                       return (
-                        <Link to={menu?.url} key={menu?.id} className={routeName === menu?.url ? 'w-100 py-3 mb-3 text-white d-flex justify-content-start align-items-center active border_radius_12' : 'w-100 py-3 mb-3 text-white d-flex justify-content-start align-items-center border_radius_12 '}>
+                        <Link to={menu?.url} key={menu?.id} className={`w-100 py-3 mb-4 text-white d-flex justify-content-start align-items-center border_radius_12 nav_link ${routeName === menu?.url ? 'active' : ''}`}>
                           <span className='mx-4'>
-                            <img src={menu.icon} alt='icon' className={menu?.id === 1 ? "campaign_icon" : ""} />
+                            <img src={routeName === menu?.url && menu?.id === 1 ? menu.activeIcon : menu.icon} alt='icon' style={{ backgroundColor: menu?.id === 1 && routeName === menu?.url ? 'white' : routeName !== menu?.url ? 'transparent' : '#219fff' }} />
                           </span>
                           <p>
                             {menu?.title}
                           </p>
                         </Link>
+                        //   <Link to={menu?.url} key={menu?.id} className={routeName === menu?.url ? 'w-100 py-3 mb-3 text-white d-flex justify-content-start align-items-center active border_radius_12' : 'w-100 py-3 mb-3 text-white d-flex justify-content-start align-items-center border_radius_12 '}>
+                        //   <span className='mx-4'>
+                        //     <img src={menu.icon} alt='icon' />
+                        //   </span>
+                        //   <p>
+                        //     {menu?.title}
+                        //   </p>
+                        // </Link>
                       )
                     })
                     : null
