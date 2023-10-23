@@ -167,6 +167,8 @@ input::-moz-focus-inner {
   font-weight: 700;
   line-height: 46.6px;
   color: var(--white-color);
+  margin-bottom: 82.95px;
+  margin-top: 62.05px;
 }
 
 .side_navigaiton_container .content_section .top_section .nav_link.active {

@@ -8,11 +8,11 @@ const Pagination = () => {
     <div className='d-flex justify-content-end align-items-center pagination_section mt-2'>
       <div>
         <span className='prev_btn px-3 py-2'>
-          <img src={prevIcon} alt />
+          <img src={prevIcon} alt="prev-icon-img" />
         </span>
         <span className='page_count mx-3 sf_pro_text text-cener'>1 of {pageNumber} page</span>
         <span className='next_btn px-3 py-2'>
-          <img src={rightIcon} alt />
+          <img src={rightIcon} alt="next-icon-img" />
         </span>
       </div>
     </div>

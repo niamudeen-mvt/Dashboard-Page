@@ -27,9 +27,9 @@ const SideNaviagation = ({ isNavOpen }) => {
     >
       {
         isNavOpen ?
-          <div className='content_section pt-5'>
+          <div className='content_section'>
             <div className='top_section '>
-              <h2 className="mx-4 mb-5">Paper Notes</h2>
+              <h2 className="mx-4 ">Paper Notes</h2>
               <div className='navigation d-flex justify-content-between align-items-center flex-column '>
                 {
                   menuItems?.length ?
