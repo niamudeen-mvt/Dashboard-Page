@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table } from 'reactstrap'
 
-const ResuseTable = ({ rowData, coloumnData }) => {
+const CampaignTable = ({ rowData, coloumnData }) => {
   console.log(rowData, "rowdata");
 
   return (
@@ -67,4 +67,4 @@ const ResuseTable = ({ rowData, coloumnData }) => {
   )
 }
 
-export default ResuseTable
+export default CampaignTable

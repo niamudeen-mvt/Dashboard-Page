@@ -8,9 +8,6 @@ import postCardShadowImg from "../../assets/images/postcard-shadow-img.png"
 import { Link } from 'react-router-dom'
 
 const PostCardDetail = () => {
-
-
-
   return (
     <section className='postcard_detail_section bg-white border_radius_26 mb-5'>
       <div className='top_content mb-5'>
@@ -39,6 +36,11 @@ const PostCardDetail = () => {
       </div>
 
       <div className='design_section'>
+        <div>
+          <p className='mb-3 interfont_18s_500w'>
+            Design
+          </p>
+        </div>
         <Row>
           <Col className='col-8 d-flex'>
             <div className='design_card'>

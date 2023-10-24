@@ -56,7 +56,7 @@ const CustomTable = () => {
                         {row?.stopDate}
                       </td>
                       <td className='common_campaign_heading sf_pro_font_400 campaign_detail'>
-                        <Link to={`/campaign-detail/${row?.id}`}>
+                        <Link to={`/campaign/${row?.id}`}>
                           {row?.action}
                         </Link>
                       </td>

@@ -25,7 +25,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
 }
 
 /* =========== default setting =========== */
@@ -47,10 +47,6 @@ button {
 
 .hide {
   display: none;
-}
-.cursor {
-  cursor: pointer;
-  z-index: 999;
 }
 
 input:focus {
@@ -111,6 +107,39 @@ input::-moz-focus-inner {
   font-family: SF Pro Text;
   line-height: 20px;
 }
+
+.interfont_18s_500w {
+  color: #161616;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.interfont_14f_400w {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.custom_theme_btn {
+  width: 95px;
+  height: 54px;
+  padding: 9px, 15px, 9px, 15px;
+  border: 1px solid #eaeaea;
+  background: var(--side-navigation-color);
+  color: #f6f8ff;
+}
+
+.custom_input {
+  min-width: 215px;
+  min-height: 56px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid #8c8c8c !important;
+  padding: 16px, 228px, 16px, 18px;
+}
+
 /* ============= Container ================ */
 
 .container {
@@ -350,7 +379,8 @@ input::-moz-focus-inner {
 }
 .campaign_detail_section .top_content,
 .campaign_detail_section .download_capmpaign_details,
-.campaign_detail_section .customers_section {
+.campaign_detail_section .customers_section,
+.campaign_detail_section .input_section {
   margin-bottom: 21px;
 }
 
@@ -389,8 +419,8 @@ input::-moz-focus-inner {
 }
 
 .postcard_detail_section .design_section .design_card {
-  max-width: 331.61px;
-  max-height: 233.65px;
+  min-width: 331.61px;
+  min-height: 233.65px;
 }
 .postcard_detail_section .design_section .design_card h2 {
   font-family: Inter;

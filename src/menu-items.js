@@ -10,26 +10,25 @@ export const menuItems = [
     id: 1,
     title: 'Campaign',
     url: '/',
-    subUrl: 'campaign-detail',
     icon: campaignIcon,
     activeIcon: campaignActiveIcon
   },
   {
     id: 2,
     title: 'Contacts',
-    url: '/contacts-page',
+    url: '/contacts',
     icon: contactIcon
   },
   {
     id: 3,
     title: 'Overview',
-    url: '/overview-page',
+    url: '/overview',
     icon: overViewIcon
   },
   {
     id: 4,
     title: 'Settings',
-    url: '/settings-page',
+    url: '/settings',
     icon: settingIcon
   },
 ]

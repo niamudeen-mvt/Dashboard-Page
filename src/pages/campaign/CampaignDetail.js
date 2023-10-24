@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
 import { campaignDetailColumnsData } from '../../data/campaign-data'
-import ResuseTable from '../../components/table/ReuseTable'
 import { customerList } from '../../data/campaign-data'
 import PostCardDetail from '../../components/postcard/PostCardDetail'
+import CampaignTable from './CampaignTable'
 
 
 const CampaignDetail = () => {
@@ -29,8 +29,16 @@ const CampaignDetail = () => {
           <h2 className='sf_pro_font_700 mb-3'>Campaign Detail</h2>
           <p className='sf_pro_font_500'>Campaign Information</p>
         </div>
+
+        {/* ====== input section =============== */}
+        <div className='input_section'>
+          <input type='text' placeholder='Amounts per postcard' className='custom_input border_radius_12 interfont_14f_400w' />
+          <button className='custom_theme_btn border_radius_12 mx-3'>Save</button>
+        </div>
+
+        {/* ============ table section ============== */}
         <div className='table_section'>
-          <ResuseTable coloumnData={campaignDetailColumnsData} rowData={updatedRowData} />
+          <CampaignTable coloumnData={campaignDetailColumnsData} rowData={updatedRowData} />
         </div>
         <div className='download_capmpaign_details d-flex justify-content-end align-content-end'>
           <button className='border_radius_12 sf_pro_text'>
@@ -38,8 +46,10 @@ const CampaignDetail = () => {
           </button>
         </div>
 
+        {/* =============== customer list section =============== */}
+
         <div className='customers_section'>
-          <Row className=''>
+          <Row >
             <Col className='col-3 subtitle'>
               <div className='d-flex justify-content-center align-items-center  h-100'>
                 <p>
@@ -65,7 +75,8 @@ const CampaignDetail = () => {
             </Col>
           </Row>
         </div>
-        <div className='download_capmpaign_details d-flex justify-content-end align-content-end'>
+
+        <div className='d-flex justify-content-end align-content-end'>
           <Link className='sf_pro_text'>
             See all customers details
           </Link>
