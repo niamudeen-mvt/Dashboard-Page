@@ -1,8 +1,8 @@
 import React from 'react'
 import userIcon from "../../assets/icons/user-icon.svg"
 import { Container } from 'reactstrap'
-import SearchNavbar from '../../components/navbar/SearchNavbar'
 import { useLocation } from 'react-router-dom'
+import NavBarComponent from '../../components/navbar'
 // import menuIcon from "../../assets/icons/menu-icon.svg"
 // import closeIcon from "../../assets/icons/close-icon.svg"
 
@@ -58,7 +58,7 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
       <Container className='container'>
         {
-          routeName === "/" ? <SearchNavbar /> : null}
+          routeName === "/" ? <NavBarComponent /> : null}
 
         {/* ================== pages data ============== */}
         <section className='mx-5'>

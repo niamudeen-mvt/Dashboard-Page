@@ -5,6 +5,7 @@ import { campaignDetailColumnsData } from '../../data/campaign-data'
 import { customerList } from '../../data/campaign-data'
 import PostCardDetail from '../../components/postcard/PostCardDetail'
 import CampaignTable from './CampaignTable'
+import SectionHeading from '../../components/common/SectionHeading'
 
 
 const CampaignDetail = () => {
@@ -25,10 +26,7 @@ const CampaignDetail = () => {
   return (
     <>
       <section className='campaign_detail_section bg-white border_radius_26 mb-3'>
-        <div className='top_content'>
-          <h2 className='sf_pro_font_700 mb-3'>Campaign Detail</h2>
-          <p className='sf_pro_font_500'>Campaign Information</p>
-        </div>
+        <SectionHeading mainHeading="Campaign Detail" subHeading="Campaign Information" />
 
         {/* ====== input section =============== */}
         <div className='input_section'>
@@ -77,7 +75,7 @@ const CampaignDetail = () => {
         </div>
 
         <div className='d-flex justify-content-end align-content-end'>
-          <Link className='sf_pro_text'>
+          <Link className='sf_pro_text' to="/campaign/customers">
             See all customers details
           </Link>
         </div>

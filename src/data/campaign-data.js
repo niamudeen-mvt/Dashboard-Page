@@ -2,6 +2,8 @@
 import campaignDefaultImg from "../assets/images/campaign-default-img.png"
 import campaignShadowImg from "../assets/images/campaign-img.png"
 
+// ========================== campaign ==================
+
 
 export const campaignColumnData = [
   {
@@ -148,6 +150,8 @@ export const campaignDetailColumnsData = [
 
 ]
 
+// ========================== customer data ========================
+
 
 export const customerList = [
   {
@@ -234,4 +238,107 @@ export const customerList = [
     id: 21,
     name: 'Weeb'
   },
+]
+
+
+export const customerColumnsData = [
+  {
+    id: 1,
+    title: 'Customer Name'
+  },
+  {
+    id: 2,
+    title: 'Campaign Name'
+  },
+  {
+    id: 3,
+    title: 'Status'
+  },
+  {
+    id: 4,
+    title: 'Created On'
+  },
+  {
+    id: 5,
+    title: 'Location'
+  },
+  {
+    id: 6,
+    title: 'Action'
+  },
+]
+
+
+export const customerRowData = [
+  {
+    id: 1,
+    customer: 'Cody',
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    id: 2,
+    customer: 'Simmon',
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    status: 'Scheduled',
+    createdOn: 'Sept 21, 2023',
+    location: '8794 Bogan Flats, ...',
+    action: 'Details'
+  },
+  {
+    id: 3,
+    customer: 'Oregon',
+    img: campaignDefaultImg,
+    campaignName: 'Last Release of a new batch',
+    status: 'Delivered',
+    createdOn: 'Sept 21, 2023',
+    location: 'Suite 942 25514 DuBu...',
+    action: 'Details'
+  },
+  {
+    id: 4,
+    customer: 'Nevada',
+    img: campaignShadowImg,
+    campaignName: 'Our New Product',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    id: 5,
+    customer: 'Howard',
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    status: 'Scheduled',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    id: 6,
+    customer: 'Mc coy',
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Suite 942 25514 DuBu...',
+    action: 'Details'
+  },
+  {
+    id: 7,
+    customer: 'Weeb',
+    img: campaignDefaultImg,
+    campaignName: 'Last Release of a new batch',
+    status: 'Delivered',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+
 ]

@@ -40,7 +40,8 @@ p {
   margin: 0;
   padding: 0;
 }
-button {
+button,
+select {
   border: none;
   background-color: transparent;
 }
@@ -49,7 +50,8 @@ button {
   display: none;
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: none;
   box-shadow: none;
 }
@@ -89,11 +91,32 @@ input::-moz-focus-inner {
   line-height: 24px;
 }
 
+.sf_pro_font_400w_14f {
+  font-family: SF Pro Display;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.sf_pro_font_400w_12f {
+  font-family: SF Pro Display;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.sf_pro_font_400w_16f {
+  font-family: SF Pro Display;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #202223 !important;
+}
+
 .sf_pro_font_500 {
   font-family: SF Pro Display;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  color: #202223 !important;
 }
 
 .sf_pro_font_700 {
@@ -108,6 +131,13 @@ input::-moz-focus-inner {
   line-height: 20px;
 }
 
+.sf_pro_text_400w_12f {
+  font-family: SF Pro Text;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: black;
+}
 .interfont_18s_500w {
   color: #161616;
   font-size: 18px;
@@ -138,6 +168,45 @@ input::-moz-focus-inner {
   text-align: center;
   border: 1px solid #8c8c8c !important;
   padding: 16px, 228px, 16px, 18px;
+}
+
+.common_section {
+  margin-top: 29px;
+}
+
+.custom_btn_section .download_btn {
+  width: 252px;
+  height: 54px;
+  padding: 9px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white-color);
+  background-color: var(--side-navigation-color);
+}
+
+.custom_btn_section .cancel_btn {
+  width: 109px;
+  height: 54px;
+  padding: 9px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--side-navigation-color);
+  background-color: #f4f4f4;
+  margin-right: 10px;
+}
+
+/* ====================== custom table status badge ================== */
+.yellow_status {
+  padding: 9px 18px;
+  background-color: #fff2ad;
+}
+.grey_status {
+  padding: 9px 18px;
+  background-color: #eaeaea;
+}
+.green_status {
+  background-color: #e3ffbf;
+  padding: 9px 18px;
 }
 
 /* ============= Container ================ */
@@ -467,4 +536,36 @@ input::-moz-focus-inner {
   font-size: 15px;
   font-weight: 400;
   line-height: 16px;
+}
+
+/* ==================== customer detail modal =========== */
+
+.modal-dialog {
+  min-width: 683.86px;
+  min-height: 589px;
+  top: 0;
+  margin: 10% auto;
+}
+
+.campaign_tag {
+  max-width: 196px;
+  height: 31px;
+  background-color: #d4d4d4;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
+.modal_close_btn {
+  width: 30.15px;
+  height: 30.15px;
+  padding: 12px;
+  background-color: #efefef;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }

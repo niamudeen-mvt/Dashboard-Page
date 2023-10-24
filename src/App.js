@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import CampaignPage from './pages/campaign/index'
+import CampaignPage from './pages/campaign'
 import ProtectedRoute from './auth/ProtectedRoute'
-import ContactPage from './pages/ContactPage'
+import ContactPage from './pages/contact'
 import OverviewPage from './pages/OverviewPage'
 import SettingsPage from './pages/SettingsPage'
 import CampaignDetail from './pages/campaign/CampaignDetail'
+import CustomerPage from './pages/customer'
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/" element={<ProtectedRoute />}>
           <Route path="" element={<CampaignPage />} />
           <Route path="campaign/:id" element={<CampaignDetail />} />
+          <Route path="campaign/customers" element={<CustomerPage />} />
           <Route path="contacts" element={<ContactPage />} />
           <Route path="overview" element={<OverviewPage />} />
           <Route path="settings" element={<SettingsPage />} />

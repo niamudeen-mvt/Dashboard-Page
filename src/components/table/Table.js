@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { campaignColumnData, campaignRowData } from '../../data/campaign-data'
 import Pagination from '../pagination/Pagination'
 
-const CustomTable = () => {
+const CustomTableComponent = () => {
   return (
     <div className='custom_table_section'>
       <div className='custom_table_container'>
@@ -72,4 +72,4 @@ const CustomTable = () => {
   )
 }
 
-export default CustomTable
+export default CustomTableComponent
