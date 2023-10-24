@@ -4,7 +4,7 @@ import CampaignPage from './pages/campaign'
 import ProtectedRoute from './auth/ProtectedRoute'
 import ContactPage from './pages/contact'
 import OverviewPage from './pages/OverviewPage'
-import SettingsPage from './pages/SettingsPage'
+import SettingsPage from './pages/settings'
 import CampaignDetail from './pages/campaign/CampaignDetail'
 import CustomerPage from './pages/customer'
 

@@ -1,9 +1,10 @@
 import React from 'react'
+import SectionHeading from '../components/common/SectionHeading'
 
 const OverviewPage = () => {
   return (
-    <div >
-      Overview Page
+    <div className='common_section'>
+      <SectionHeading mainHeading="Overview Page" />
     </div>
   )
 }
