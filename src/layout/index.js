@@ -18,7 +18,7 @@ const MainLayout = ({ children }) => {
 
 
   return (
-    <div className='min-vh-100 position-realtive d-flex w-100' >
+    <div className='min-vh-100 position-realtive d-flex w-100 main_layout' >
       <SideNaviagation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <MainContainer isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} children={children} />
     </div>
