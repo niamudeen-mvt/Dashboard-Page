@@ -8,7 +8,6 @@ import SettingsPage from './pages/settings'
 import CampaignDetail from './pages/campaign/CampaignDetail'
 import CustomerPage from './pages/customer'
 
-
 const App = () => {
 
   return (
