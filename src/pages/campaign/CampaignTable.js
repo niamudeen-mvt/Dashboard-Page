@@ -3,7 +3,6 @@ import { Table } from 'reactstrap'
 import { SuccessBadge } from '../../components/shared/badges';
 
 const CampaignTable = ({ rowData, coloumnData }) => {
-  console.log(rowData, "rowdata");
 
   return (
     <div className='custom_table_section'>
