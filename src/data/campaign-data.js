@@ -150,7 +150,6 @@ export const campaignDetailColumnsData = [
 
 ]
 
-// ========================== customer data ========================
 
 
 export const customerList = [
@@ -341,4 +340,10 @@ export const customerRowData = [
     action: 'Details'
   },
 
+]
+
+export const customerDetailStatuslist = [
+  "Sent Out",
+  "Scheduled",
+  "Delivered"
 ]

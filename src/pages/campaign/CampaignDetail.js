@@ -46,7 +46,7 @@ const CampaignDetail = () => {
         <DownloadCustomerDetail margin="mb-2" />
         {/* =============== customer list section =============== */}
 
-        <div className='customers_list_section'>
+        <div className='customers_list_section mb-3'>
           <Row className='py-3 '>
             <Col className='col-3 subtitle'>
               <div className='d-flex justify-content-center align-items-center  h-100'>
@@ -61,36 +61,16 @@ const CampaignDetail = () => {
                   customerList?.map((customer) => {
                     return (
                       <CustomerBadge key={customer?.id} content={customer?.name} />
-                      // <Col key={customer?.id}
-                      //   className={customer?.id <= 12 ? 'col-1 mb-3 ' : ''}>
-                      //   <div className='customer_badge d-flex justify-content-center align-items-center w-100 sf_pro_font_400'>
-                      //     {customer?.name}
-                      //   </div>
-                      // </Col>
                     )
                   })
                 }
               </div>
-              {/* <Row className='py-2'>
-                {
-                  customerList?.map((customer) => {
-                    return (
-                      <Col key={customer?.id}
-                        className={customer?.id <= 12 ? 'col-1 mb-3 ' : ''}>
-                        <div className='customer_badge d-flex justify-content-center align-items-center w-100 sf_pro_font_400'>
-                          {customer?.name}
-                        </div>
-                      </Col>
-                    )
-                  })
-                }
-              </Row> */}
             </Col>
           </Row>
         </div>
 
         <div className='d-flex justify-content-end align-content-end'>
-          <Link className='sf_pro_text' to="/campaign/customers">
+          <Link className='sf_pro_text common_link_color' to="/campaign/customers">
             See all customers details
           </Link>
         </div>

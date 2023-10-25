@@ -23,6 +23,7 @@
   --soft-blue-theme: #f6f8ff;
   --dark-blue: #02005f;
   --dark-grey: #d4d4d4;
+  --link-color: #2b8be4;
 }
 
 body {
@@ -196,6 +197,10 @@ input::-moz-focus-inner {
   margin-top: 29px;
 }
 
+.common_link_color {
+  color: var(--link-color) !important;
+}
+
 .custom_btn_section .download_btn {
   width: 252px;
   height: 54px;
@@ -231,20 +236,6 @@ input::-moz-focus-inner {
   max-width: 76px;
   max-height: 31px;
   padding: 10px;
-}
-
-/* ====================== custom table status badge ================== */
-.yellow_status {
-  padding: 9px 18px;
-  background-color: #fff2ad;
-}
-.grey_status {
-  padding: 9px 18px;
-  background-color: #eaeaea;
-}
-.green_status {
-  background-color: #e3ffbf;
-  padding: 9px 18px;
 }
 
 /* ============= Container ================ */
@@ -296,7 +287,8 @@ input::-moz-focus-inner {
   color: #030303;
 }
 
-.navbar .filter_container .dropdown-menu {
+.navbar .filter_container .dropdown-menu,
+.dropdown-menu {
   min-width: 136.25px;
   --bs-dropdown-link-hover-bg: var(--soft-blue-theme);
   --bs-dropdown-link-active-bg: var(--soft-blue-theme);
@@ -598,8 +590,6 @@ input::-moz-focus-inner {
 }
 
 .customer_list {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;

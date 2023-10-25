@@ -3,7 +3,7 @@ import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { campaignColumnData, campaignRowData } from '../../data/campaign-data'
 import Pagination from '../pagination/Pagination'
-import { DisabledBadge, ProgressBadge } from '../shared/badges'
+import { DisabledBadge, SuccessBadge } from '../shared/badges'
 
 const CustomTableComponent = () => {
   return (
@@ -44,7 +44,7 @@ const CustomTableComponent = () => {
                       <td >
                         {
                           row?.status === 'On Going' ?
-                            <ProgressBadge content={row?.status} />
+                            <SuccessBadge content={row?.status} />
                             :
                             <DisabledBadge content={row?.status} />
                         }

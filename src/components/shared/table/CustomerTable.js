@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import Pagination from '../pagination/Pagination'
+import Pagination from '../../pagination/Pagination'
+import { DisabledBadge, ProgressBadge, SuccessBadge } from '../badges'
+import { customerDetailStatuslist } from '../../../data/campaign-data'
 
-const ReuseTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
+const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
 
-  // const dropdownList = [
-  //   'Sent Out',
-  //   'Delivered',
-  //   'Scheduled'
-  // ]
+  const [selectedItem, setSelectedItem] = useState('')
+
+
+  const handleSelectStatus = (e) => {
+    setSelectedItem(e.target.textContent)
+  }
 
   const handleCustomerDetail = () => {
     setShowCustomerDetail(true)
@@ -49,23 +52,24 @@ const ReuseTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                       </td>
                       <td className={`common_campaign_heading`} >
                         <div className='sf_pro_font_400w_12f'>
-                          <span className={`status_dropdown sf_pro_text_400w_12f border_radius_12 ${row?.status === 'Sent Out' ? 'grey_status' : (row?.status === 'Scheduled' ? 'yellow_status' : 'green_status')}`}>
-                            {row?.status}
-                          </span>
+                          <div class="dropdown">
+                            <button class="dropdown-toggle w-100 d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              {
+                                row?.status === 'Sent Out' ? <DisabledBadge content={row?.status} /> : row?.status === 'Scheduled' ? <ProgressBadge content={row?.status} /> : <SuccessBadge content={row?.status} />
+                              }
+                            </button>
+                            <ul class="dropdown-menu">
+                              {
+                                customerDetailStatuslist?.length ?
+                                  customerDetailStatuslist?.map((e) => {
+                                    return (
+                                      <li key={e}><a class="dropdown-item" href="#" onClick={handleSelectStatus} >{e}</a></li>
+                                    )
+                                  }) : null
+                              }
 
-                          <select className='mx-2'>
-                            <option selected hidden className=''></option>
-                            {/* {
-                            dropdownList?.length ?
-                              dropdownList?.map((e, index) => {
-                                return (
-                                  <option key={e} selected={e === row?.status} className='bg-white' value={e}>
-                                    {e}
-                                  </option>
-                                )
-                              }) : null
-                          } */}
-                          </select>
+                            </ul>
+                          </div>
 
                         </div>
                       </td>
@@ -94,4 +98,4 @@ const ReuseTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
   )
 }
 
-export default ReuseTable
+export default CustomerTable

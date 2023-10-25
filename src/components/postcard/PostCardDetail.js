@@ -70,7 +70,7 @@ const PostCardDetail = () => {
               <h2>
                 You can download The design from here
               </h2>
-              <Link to="#" className='sf_pro_font_400'>
+              <Link to="#" className='sf_pro_font_400 common_link_color'>
                 Download Design
               </Link>
             </div>

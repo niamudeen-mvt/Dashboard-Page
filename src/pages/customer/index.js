@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import SectionHeading from '../../components/shared/SectionHeading'
+import SectionHeading from "../../components/shared/SectionHeading"
 import SearchBar from '../../components/navbar'
-import ReuseTable from '../../components/table/ResuseTable'
+import CustomerTable from '../../components/shared/table/CustomerTable'
 import { customerColumnsData } from '../../data/campaign-data'
 import { customerRowData } from '../../data/campaign-data'
 import CustomerDetailModal from '../../components/modal/CustomerDetailModal'
@@ -16,7 +16,7 @@ const CustomerPage = () => {
       }
       <SectionHeading mainHeading="Customer Detail" />
       <SearchBar />
-      <ReuseTable coloumnData={customerColumnsData} rowData={customerRowData} setShowCustomerDetail={setShowCustomerDetail} showCustomerDetail={showCustomerDetail} />
+      <CustomerTable coloumnData={customerColumnsData} rowData={customerRowData} setShowCustomerDetail={setShowCustomerDetail} showCustomerDetail={showCustomerDetail} />
     </div>
   )
 }
