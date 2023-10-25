@@ -27,7 +27,9 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                 coloumnData?.length ?
                   coloumnData.map(coloumn => {
                     return (
-                      <th key={coloumn?.id} className='coloumn_headings sf_pro_font_400w_12f'>
+                      <th key={coloumn?.id} className='coloumn_headings sf_pro_font_400w_12f' style={{
+                        minWidth: (coloumn?.id === 1 || coloumn?.id === 4) ? '243px' : (coloumn?.id === 2 ? '338px' : coloumn?.id === 3 ? '154px' : coloumn?.id === 6 ? '154px' : '')
+                      }} >
                         {coloumn?.title}
                       </th>
                     )
@@ -74,7 +76,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                         </div>
                       </td>
                       <td className='common_campaign_heading'>
-                        <p className='sf_pro_font_400w_16f'>
+                        <p className='sf_pro_font_400w_16f created_on'>
                           {row?.createdOn}
                         </p>
                       </td>

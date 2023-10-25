@@ -10,7 +10,7 @@ const CustomerPage = () => {
 
   const [showCustomerDetail, setShowCustomerDetail] = useState(false);
   return (
-    <div className='common_section'>
+    <div className='common_section_margin'>
       {
         showCustomerDetail ? <CustomerDetailModal setShowCustomerDetail={setShowCustomerDetail} showCustomerDetail={showCustomerDetail} /> : null
       }

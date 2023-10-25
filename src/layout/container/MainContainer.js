@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom'
 import { Container } from 'reactstrap'
 import userIcon from "../../assets/icons/user-icon.svg"
 import SearchBar from '../../components/navbar'
-import UserProfile from '../../components/profile/UserProfile'
 // import menuIcon from "../../assets/icons/menu-icon.svg"
 // import closeIcon from "../../assets/icons/close-icon.svg"
 

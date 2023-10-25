@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, ModalBody, Container, Row, Col } from 'reactstrap';
 import DownloadCustomerDetail from '../shared/button';
 import closeIcon from "../../assets/icons/close-icon.svg"
+import { CustomerBadge, DisabledBadge } from '../shared/badges';
 
 function CustomerDetailModal({ showCustomerDetail, setShowCustomerDetail }) {
   const toggle = () => setShowCustomerDetail(!showCustomerDetail);
@@ -14,8 +15,10 @@ function CustomerDetailModal({ showCustomerDetail, setShowCustomerDetail }) {
     <div className='customer_detail_modal'>
       <Modal isOpen={showCustomerDetail} toggle={toggle} centered>
         <ModalBody>
-          <div className='top_section d-flex justify-content-end align-items-center cursor'>
-            <span className='modal_close_btn d-flex justify-content-center align-items-center' onClick={handleCloseBtn}>
+          <div className='top_section d-flex justify-content-end align-items-center'>
+            <span className='modal_close_btn d-flex justify-content-center align-items-center' onClick={handleCloseBtn} style={{
+              cursor: 'pointer'
+            }}>
               <img src={closeIcon} alt="close-btn" width='10px' height='10px' />
             </span>
           </div>
@@ -74,7 +77,7 @@ function CustomerDetailModal({ showCustomerDetail, setShowCustomerDetail }) {
               </Col>
               <Col className='col-6 p-0'>
                 <div className='py-2 border-bottom d-flex'>
-                  <p className='sf_pro_font_400w_12f grey_status p-0 px-3 border_radius_12'>Sent out</p>
+                  <DisabledBadge content="Sent out" />
                 </div>
               </Col>
               <Col className='col-6 p-0'>
