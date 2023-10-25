@@ -15,20 +15,22 @@ const PostCardDetail = () => {
         <h2 className='sf_pro_font_700 mb-3'>Postcard Detail</h2>
       </div>
 
+
+      {/* =========== customer-card ============ */}
       <div className='card_section mb-5'>
         <Row >
           <Col className='col-6 d-flex'>
-            <div className='post_card transition_5s cursor'>
-              <span className=''>
+            <div className='post_card transition_5s cursor border_radius_9'>
+              <div className='status_badge pending d-flex justify-content-center align-items-center '>
                 <img src={pendingIcon} alt='pending-icon' />
-              </span>
+              </div>
               <p className='main_heading my-3'>Customer Pending</p>
               <p className='count'>23</p>
             </div>
-            <div className='post_card transition_5s cursor mx-4'>
-              <span className=''>
+            <div className='post_card transition_5s cursor border_radius_9 mx-4'>
+              <div className='status_badge sent d-flex justify-content-center align-items-center'>
                 <img src={sentIcon} alt='sent-icon' />
-              </span>
+              </div>
               <p className='main_heading my-3 '>Sent</p>
               <p className='count'>66</p>
             </div>
@@ -36,6 +38,7 @@ const PostCardDetail = () => {
         </Row>
       </div>
 
+      {/* ================ design - card ========== */}
       <div className='design_section'>
         <div>
           <p className='mb-3 interfont_18s_500w'>

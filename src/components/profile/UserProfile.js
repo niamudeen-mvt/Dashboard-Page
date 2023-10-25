@@ -4,7 +4,7 @@ import userProfileIcon from "../../assets/icons/user-profile-icon.svg"
 
 const UserProfile = () => {
   return (
-    <div className='common_section settings_continer'>
+    <div className='common_section settings_continer border'>
       <div className='profile_section bg-white py-4 px-3'>
         <span className='sf_pro_font_700w_22f'>
           Profile
