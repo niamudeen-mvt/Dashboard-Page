@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SectionHeading from '../../components/common/SectionHeading'
+import SectionHeading from '../../components/shared/SectionHeading'
 import SearchBar from '../../components/navbar'
 import ReuseTable from '../../components/table/ResuseTable'
 import { customerColumnsData } from '../../data/campaign-data'

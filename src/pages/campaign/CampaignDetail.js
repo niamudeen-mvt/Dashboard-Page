@@ -5,7 +5,9 @@ import { campaignDetailColumnsData } from '../../data/campaign-data'
 import { customerList } from '../../data/campaign-data'
 import PostCardDetail from '../../components/postcard/PostCardDetail'
 import CampaignTable from './CampaignTable'
-import SectionHeading from '../../components/common/SectionHeading'
+import SectionHeading from '../../components/shared/SectionHeading'
+import DownloadCustomerDetail from '../../components/shared/button'
+import { CustomerBadge } from '../../components/shared/badges'
 
 
 const CampaignDetail = () => {
@@ -40,16 +42,12 @@ const CampaignDetail = () => {
         <div className='table_section'>
           <CampaignTable coloumnData={campaignDetailColumnsData} rowData={updatedRowData} />
         </div>
-        <div className='download_capmpaign_details d-flex justify-content-end align-content-end'>
-          <button className='border_radius_12 sf_pro_text'>
-            Download Campaign Details
-          </button>
-        </div>
 
+        <DownloadCustomerDetail margin="mb-2" />
         {/* =============== customer list section =============== */}
 
-        <div className='customers_section'>
-          <Row >
+        <div className='customers_list_section'>
+          <Row className='py-3 '>
             <Col className='col-3 subtitle'>
               <div className='d-flex justify-content-center align-items-center  h-100'>
                 <p>
@@ -57,8 +55,23 @@ const CampaignDetail = () => {
                 </p>
               </div>
             </Col>
-            <Col className='col-9 customer_list p-0 px-3'>
-              <Row className='py-2'>
+            <Col className='col-9  p-0 px-3 '>
+              <div className='customer_list'>
+                {
+                  customerList?.map((customer) => {
+                    return (
+                      <CustomerBadge key={customer?.id} content={customer?.name} />
+                      // <Col key={customer?.id}
+                      //   className={customer?.id <= 12 ? 'col-1 mb-3 ' : ''}>
+                      //   <div className='customer_badge d-flex justify-content-center align-items-center w-100 sf_pro_font_400'>
+                      //     {customer?.name}
+                      //   </div>
+                      // </Col>
+                    )
+                  })
+                }
+              </div>
+              {/* <Row className='py-2'>
                 {
                   customerList?.map((customer) => {
                     return (
@@ -71,7 +84,7 @@ const CampaignDetail = () => {
                     )
                   })
                 }
-              </Row>
+              </Row> */}
             </Col>
           </Row>
         </div>

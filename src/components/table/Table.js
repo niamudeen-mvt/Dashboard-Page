@@ -3,6 +3,7 @@ import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { campaignColumnData, campaignRowData } from '../../data/campaign-data'
 import Pagination from '../pagination/Pagination'
+import { DisabledBadge, ProgressBadge } from '../shared/badges'
 
 const CustomTableComponent = () => {
   return (
@@ -41,9 +42,12 @@ const CustomTableComponent = () => {
                         {row?.storeName}
                       </td>
                       <td >
-                        <p className={row?.status == "On Going" ? 'campaign_status sf_pro_text status_badge_ongoing d-flex justify-content-center align-items-center border_radius_12 mt-2' : 'campaign_status sf_pro_text status_badge_paused d-flex justify-content-center align-items-center border_radius_12 mt-2'}>
-                          {row?.status}
-                        </p>
+                        {
+                          row?.status === 'On Going' ?
+                            <ProgressBadge content={row?.status} />
+                            :
+                            <DisabledBadge content={row?.status} />
+                        }
                       </td>
                       <td className='common_campaign_heading sf_pro_font_400'>
                         {row?.budget}

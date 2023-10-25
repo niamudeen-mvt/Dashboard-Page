@@ -6,6 +6,7 @@ import sentIcon from "../../assets/icons/postcard-sent-icon.svg"
 import postCardDesignImg from "../../assets/images/postcard-design-img1.png"
 import postCardShadowImg from "../../assets/images/postcard-shadow-img.png"
 import { Link } from 'react-router-dom'
+import DownloadCustomerDetail from '../shared/button'
 
 const PostCardDetail = () => {
   return (
@@ -77,11 +78,7 @@ const PostCardDetail = () => {
         </Row>
       </div>
 
-      <div className='download_capmpaign_details d-flex justify-content-end align-content-end'>
-        <button className='border_radius_12 sf_pro_text'>
-          Download Postcards Details
-        </button>
-      </div>
+      <DownloadCustomerDetail />
     </section >
   )
 }

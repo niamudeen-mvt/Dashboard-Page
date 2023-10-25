@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionHeading from '../components/common/SectionHeading'
+import SectionHeading from '../components/shared/SectionHeading'
 
 const OverviewPage = () => {
   return (

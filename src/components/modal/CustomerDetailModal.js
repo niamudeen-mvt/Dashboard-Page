@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, ModalBody, Container, Row, Col } from 'reactstrap';
-import DownloadCustomerDetail from '../common/button';
+import DownloadCustomerDetail from '../shared/button';
 import closeIcon from "../../assets/icons/close-icon.svg"
 
 function CustomerDetailModal({ showCustomerDetail, setShowCustomerDetail }) {

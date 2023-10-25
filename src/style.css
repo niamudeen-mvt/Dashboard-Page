@@ -22,6 +22,7 @@
   --side-navigation-color: #003848;
   --soft-blue-theme: #f6f8ff;
   --dark-blue: #02005f;
+  --dark-grey: #d4d4d4;
 }
 
 body {
@@ -69,6 +70,14 @@ input::-moz-focus-inner {
   -o-transition: 0.5s ease-in-out;
 }
 
+.border_radius_9 {
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
 .border_radius_12 {
   border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -76,7 +85,6 @@ input::-moz-focus-inner {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
 }
-
 .border_radius_26 {
   border-radius: 26px;
   -webkit-border-radius: 26px;
@@ -207,6 +215,22 @@ input::-moz-focus-inner {
   color: var(--side-navigation-color);
   background-color: #f4f4f4;
   margin-right: 10px;
+}
+
+/* ===================== badges ============ */
+.progress_badge {
+  width: 89px;
+  height: 27px;
+}
+.disabled_badge {
+  width: 78px;
+  height: 27px;
+}
+.customer_badge {
+  min-width: 57px;
+  max-width: 76px;
+  max-height: 31px;
+  padding: 10px;
 }
 
 /* ====================== custom table status badge ================== */
@@ -394,17 +418,6 @@ input::-moz-focus-inner {
   font-size: 8px;
 }
 
-.custom_table_section .custom_table_container .status_badge_ongoing {
-  width: 89px;
-  height: 27px;
-  background-color: #e3ffbf !important;
-}
-.custom_table_section .custom_table_container .status_badge_paused {
-  width: 78px;
-  height: 27px;
-  background-color: #eaeaea !important;
-}
-
 /* ============= pagination ============ */
 
 .pagination_section .prev_btn,
@@ -582,4 +595,12 @@ input::-moz-focus-inner {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+.customer_list {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
