@@ -7,6 +7,7 @@ import OverviewPage from './pages/overview'
 import SettingsPage from './pages/settings'
 import CampaignDetail from './pages/campaign/CampaignDetail'
 import CustomerPage from './pages/customer'
+import ResetPassword from './pages/forms/ResetPassword'
 
 const App = () => {
 
