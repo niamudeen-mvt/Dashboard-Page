@@ -151,17 +151,19 @@ input::-moz-focus-inner {
 
 /* ================== SF PRO TEXT ================== */
 
-.sf_pro_text {
-  font-family: SF Pro Text;
-  line-height: 20px;
-}
-
 .sf_pro_text_400w_12f {
   font-family: SF Pro Text;
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   color: black;
+  /* color:#202223 */
+}
+.sf_pro_text_500w_14f {
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 /* ======================= INTER FONT ============== */
@@ -178,7 +180,6 @@ input::-moz-focus-inner {
   line-height: 24px;
 }
 .interfont_14f_500w {
-  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -276,11 +277,6 @@ input::-moz-focus-inner {
 .navbar .input_section input {
   border: none;
   background-color: transparent;
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
 }
 
 .navbar .filter_container {
@@ -297,9 +293,6 @@ input::-moz-focus-inner {
 }
 .navbar .filter_container .dropdown-toggle,
 .navbar .filter_container .dropdown-menu .dropdown-item {
-  font-family: SF Pro Text;
-  font-size: 14px;
-  font-weight: 500;
   color: #030303;
 }
 
@@ -341,10 +334,6 @@ input::-moz-focus-inner {
 
 .side_navigaiton_container .content_section .top_section .nav_link.active {
   background-color: var(--white-color);
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
   color: #6c6c6c !important;
 }
 
@@ -359,7 +348,6 @@ input::-moz-focus-inner {
 }
 
 .side_navigaiton_container .content_section .bottom_section button p {
-  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -482,6 +470,13 @@ input::-moz-focus-inner {
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
 }
+
+.customer_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .campaign_detail_section .top_content,
 .campaign_detail_section .download_capmpaign_details,
 .campaign_detail_section .customers_section,
@@ -522,13 +517,11 @@ input::-moz-focus-inner {
 }
 
 .postcard_detail_section .post_card .main_heading {
-  font-family: Inter;
   font-size: 21px;
   font-weight: 500;
   line-height: 24px;
 }
 .postcard_detail_section .post_card .count {
-  font-family: Inter;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -558,7 +551,6 @@ input::-moz-focus-inner {
   min-height: 24px;
   padding: 2px 4px;
   background-color: #e4e5e7;
-  font-family: SF Pro Text;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -570,7 +562,6 @@ input::-moz-focus-inner {
 
 .postcard_detail_section .design_section .img_overlay {
   inset: 0;
-  font-family: SF Pro Text;
   font-size: 35px;
   font-weight: 600;
   line-height: 16px;
@@ -582,13 +573,11 @@ input::-moz-focus-inner {
 }
 
 .postcard_detail_section .design_section .img_overlay2 .name {
-  font-family: SF Pro Text;
   font-size: 28px;
   font-weight: 400;
 }
 
 .postcard_detail_section .design_section .img_overlay2 p {
-  font-family: SF Pro Text;
   font-size: 15px;
   font-weight: 400;
   line-height: 16px;
@@ -624,12 +613,6 @@ input::-moz-focus-inner {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-}
-
-.customer_list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 /* ================= settings ============ */

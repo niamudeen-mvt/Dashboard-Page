@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
 import { campaignDetailColumnsData } from '../../data/campaign-data'
 import { customerList } from '../../data/campaign-data'
@@ -70,7 +70,7 @@ const CampaignDetail = () => {
         </div>
 
         <div className='d-flex justify-content-end align-content-end'>
-          <Link className='sf_pro_text common_link_color' to="/campaign/customers">
+          <Link className='sf_pro_text_500w_14f common_link_color' to="/campaign/customers">
             See all customers details
           </Link>
         </div>

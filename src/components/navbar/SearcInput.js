@@ -9,7 +9,7 @@ const SearchInput = () => {
         <span className='mx-2'>
           <img src={searchIcon} alt='search-icon' />
         </span>
-        <input className="mx-2 w-100" type="search" placeholder="Search Campaigns" aria-label="Search" />
+        <input className="mx-2 w-100 interfont_14f_400w" type="search" placeholder="Search Campaigns" aria-label="Search" />
       </div>
     </form>
   )

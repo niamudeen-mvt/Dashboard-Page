@@ -10,7 +10,7 @@ const Pagination = () => {
         <span className='prev_btn px-3 py-2'>
           <img src={prevIcon} alt="prev-icon-img" />
         </span>
-        <span className='page_count mx-3 sf_pro_text text-cener'>1 of {pageNumber} page</span>
+        <span className='page_count mx-3 sf_pro_text_400w_12f text-cener'>1 of {pageNumber} page</span>
         <span className='next_btn px-3 py-2'>
           <img src={rightIcon} alt="next-icon-img" />
         </span>

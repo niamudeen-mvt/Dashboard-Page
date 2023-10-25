@@ -8,12 +8,12 @@ const DownloadCustomerDetail = ({ setShowCustomerDetail, margin }) => {
     <div className={`custom_btn_section d-flex justify-content-end align-content-end ${margin ? margin : ''}`}>
       {
         (subRoute === "/campaign" && routeName !== "/campaign/customers") ? null :
-          <button className='border_radius_12 sf_pro_text cancel_btn' onClick={() => setShowCustomerDetail(false)}>
+          <button className='border_radius_12 sf_pro_text_500w_14f cancel_btn' onClick={() => setShowCustomerDetail(false)}>
             Cancel
           </button>
       }
 
-      <button className='border_radius_12 sf_pro_text download_btn'>
+      <button className='border_radius_12 sf_pro_text_500w_14f download_btn'>
         Download Campaign Details
       </button>
     </div>
