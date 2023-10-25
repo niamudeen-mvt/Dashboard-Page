@@ -248,9 +248,7 @@ input::-moz-focus-inner {
   height: 27px;
 }
 .customer_badge {
-  min-width: 57px;
-  max-width: 76px;
-  max-height: 31px;
+  height: 31px;
   padding: 10px;
 }
 
