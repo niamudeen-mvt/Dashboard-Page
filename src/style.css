@@ -213,7 +213,6 @@ input::-moz-focus-inner {
   width: 215px;
   height: 56px;
   background-color: transparent;
-  text-align: center;
   border: 1px solid #8c8c8c !important;
   /* padding: 16px, 228px, 16px, 18px; */
 }
@@ -452,21 +451,7 @@ input::-moz-focus-inner {
   background-color: var(--side-navigation-color);
 }
 
-/* .campaign_detail_section .customers_section .customer_list .customer_badge {
-    max-width: 78px;
-    max-height: 31px;
-    padding: 10px;
-    border-radius: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    -ms-border-radius: 9px;
-    -o-border-radius: 9px;
-    background-color: #d4d4d4;
-    font-size: 13px;
-    text-align: left;
-  } */
-
-.campaign_detail_section .customers_section {
+.campaign_detail_section .customers_list_section {
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
 }

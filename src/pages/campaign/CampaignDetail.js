@@ -8,12 +8,11 @@ import CampaignTable from './CampaignTable'
 import SectionHeading from '../../components/shared/SectionHeading'
 import DownloadCustomerDetail from '../../components/shared/button'
 import { CustomerBadge } from '../../components/shared/badges'
+import CampaignCustomInput from '../../components/input'
 
 
 const CampaignDetail = () => {
   // const { id } = useParams()
-
-
 
   const updatedRowData = [{
     id: 1,
@@ -33,20 +32,16 @@ const CampaignDetail = () => {
         <SectionHeading mainHeading="Campaign Detail" subHeading="Campaign Information" />
 
         {/* ====== input section =============== */}
-        <div className='input_section'>
-          <input type='text' placeholder='Amounts per postcard' className='custom_input border_radius_12 interfont_14f_400w' />
-          <button className='custom_theme_btn border_radius_12 mx-3'>Save</button>
-        </div>
+        <CampaignCustomInput />
+
 
         {/* ============ table section ============== */}
-        <div className='table_section'>
-          <CampaignTable coloumnData={campaignDetailColumnsData} rowData={updatedRowData} />
-        </div>
+        <CampaignTable coloumnData={campaignDetailColumnsData} rowData={updatedRowData} />
 
-        <DownloadCustomerDetail margin="mb-2" />
+        <DownloadCustomerDetail margin="mb-4" />
         {/* =============== customer list section =============== */}
 
-        <div className='customers_list_section mb-3'>
+        <div className='customers_list_section mb-3 '>
           <Row className='py-3 '>
             <Col className='col-3 subtitle'>
               <div className='d-flex justify-content-center align-items-center  h-100'>
