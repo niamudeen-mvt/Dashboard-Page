@@ -6,8 +6,9 @@ import { DisabledBadge, ProgressBadge, SuccessBadge } from '../badges'
 import { customerDetailStatuslist } from '../../../data/campaign-data'
 
 const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
-
   const [rowDataList, setRowDataList] = useState(rowData)
+  const [currentPage, setCurrentPage] = useState(1)
+
   const handleSelectStatus = (e, index) => {
     let newArray = [...rowDataList]
     newArray[index].status = e.target.textContent
@@ -17,6 +18,15 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
   const handleCustomerDetail = () => {
     setShowCustomerDetail(true)
   }
+  const itemPerPage = 7
+  const totalPages = rowDataList?.length
+
+  const endIndex = currentPage * itemPerPage
+  const startIndex = endIndex - itemPerPage
+
+
+  const updatedRowList = rowDataList.slice(startIndex, endIndex)
+
   return (
     <div className='custom_table_section'>
       <div className='custom_table_container'>
@@ -39,8 +49,8 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
           </thead>
           <tbody>
             {
-              rowDataList?.length ?
-                rowDataList.map((row, index) => {
+              updatedRowList?.length ?
+                updatedRowList.map((row, index) => {
                   return (
                     <tr key={row?.id}>
                       <td className="common_campaign_heading sf_pro_font_400w_16f">
@@ -95,7 +105,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
           </tbody>
         </Table>
       </div>
-      <Pagination />
+      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} rowDataList={rowDataList} itemPerPage={itemPerPage} totalPages={totalPages} />
     </div >
   )
 }

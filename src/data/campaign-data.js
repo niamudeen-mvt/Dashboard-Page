@@ -39,7 +39,6 @@ export const campaignColumnData = [
 
 export const campaignRowData = [
   {
-    id: 1,
     img: campaignDefaultImg,
     campaignName: 'First Purchase Celebration',
     storeName: 'Cody',
@@ -50,7 +49,6 @@ export const campaignRowData = [
     action: 'Details'
   },
   {
-    id: 2,
     img: campaignShadowImg,
     campaignName: 'Happy Birthday',
     storeName: 'Simmon',
@@ -61,7 +59,6 @@ export const campaignRowData = [
     action: 'Details'
   },
   {
-    id: 3,
     img: campaignDefaultImg,
     campaignName: 'Latest Release of a new batch',
     storeName: 'Oregon',
@@ -72,7 +69,6 @@ export const campaignRowData = [
     action: 'Details'
   },
   {
-    id: 4,
     img: campaignShadowImg,
     campaignName: 'Our New Product',
     storeName: 'Nevada',
@@ -83,7 +79,6 @@ export const campaignRowData = [
     action: 'Details'
   },
   {
-    id: 5,
     img: campaignDefaultImg,
     campaignName: 'First Purchase Celebration',
     storeName: 'Howard',
@@ -94,7 +89,6 @@ export const campaignRowData = [
     action: 'Details'
   },
   {
-    id: 6,
     img: campaignDefaultImg,
     campaignName: 'Happy Birthday',
     storeName: 'Mc coy',
@@ -105,7 +99,146 @@ export const campaignRowData = [
     action: 'Details'
   },
   {
-    id: 7,
+    img: campaignDefaultImg,
+    campaignName: 'Latest Release of a new batch',
+    storeName: 'Weeb',
+    status: 'On Going',
+    budget: '$2851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Nov 21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    storeName: 'Simmon',
+    status: 'Paused',
+    budget: '$951.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Oct 21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'Latest Release of a new batch',
+    storeName: 'Oregon',
+    status: 'On Going',
+    budget: '$2851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Nov 21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    storeName: 'Cody',
+    status: 'On Going',
+    budget: '$851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Sept 30, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignShadowImg,
+    campaignName: 'Our New Product',
+    storeName: 'Nevada',
+    status: 'On Going',
+    budget: '$81.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Dec  21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    storeName: 'Howard',
+    status: 'Paused',
+    budget: '$851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Sept 30, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'Happy Birthday',
+    storeName: 'Mc coy',
+    status: 'On Going',
+    budget: '$951.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Oct 21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'Latest Release of a new batch',
+    storeName: 'Weeb',
+    status: 'On Going',
+    budget: '$2851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Nov 21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'Latest Release of a new batch',
+    storeName: 'Oregon',
+    status: 'On Going',
+    budget: '$2851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Nov 21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    storeName: 'Simmon',
+    status: 'Paused',
+    budget: '$951.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Oct 21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    storeName: 'Cody',
+    status: 'On Going',
+    budget: '$851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Sept 30, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignShadowImg,
+    campaignName: 'Our New Product',
+    storeName: 'Nevada',
+    status: 'On Going',
+    budget: '$81.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Dec  21, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    storeName: 'Howard',
+    status: 'Paused',
+    budget: '$851.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Sept 30, 2023',
+    action: 'Details'
+  },
+  {
+    img: campaignDefaultImg,
+    campaignName: 'Happy Birthday',
+    storeName: 'Mc coy',
+    status: 'On Going',
+    budget: '$951.99 ',
+    startDate: 'Sept 21, 2023',
+    stopDate: 'Oct 21, 2023',
+    action: 'Details'
+  },
+  {
     img: campaignDefaultImg,
     campaignName: 'Latest Release of a new batch',
     storeName: 'Weeb',
@@ -150,6 +283,7 @@ export const campaignDetailColumnsData = [
 
 ]
 
+// ========================== customer data ========================
 
 
 export const customerList = [
@@ -270,7 +404,6 @@ export const customerColumnsData = [
 
 export const customerRowData = [
   {
-    id: 1,
     customer: 'Cody',
     img: campaignDefaultImg,
     campaignName: 'First Purchase Celebration',
@@ -280,7 +413,6 @@ export const customerRowData = [
     action: 'Details'
   },
   {
-    id: 2,
     customer: 'Simmon',
     img: campaignShadowImg,
     campaignName: 'Happy Birthday',
@@ -290,7 +422,6 @@ export const customerRowData = [
     action: 'Details'
   },
   {
-    id: 3,
     customer: 'Oregon',
     img: campaignDefaultImg,
     campaignName: 'Last Release of a new batch',
@@ -300,7 +431,6 @@ export const customerRowData = [
     action: 'Details'
   },
   {
-    id: 4,
     customer: 'Nevada',
     img: campaignShadowImg,
     campaignName: 'Our New Product',
@@ -310,7 +440,6 @@ export const customerRowData = [
     action: 'Details'
   },
   {
-    id: 5,
     customer: 'Howard',
     img: campaignDefaultImg,
     campaignName: 'First Purchase Celebration',
@@ -320,7 +449,6 @@ export const customerRowData = [
     action: 'Details'
   },
   {
-    id: 6,
     customer: 'Mc coy',
     img: campaignShadowImg,
     campaignName: 'Happy Birthday',
@@ -330,7 +458,6 @@ export const customerRowData = [
     action: 'Details'
   },
   {
-    id: 7,
     customer: 'Weeb',
     img: campaignDefaultImg,
     campaignName: 'Last Release of a new batch',
@@ -339,7 +466,132 @@ export const customerRowData = [
     location: 'Apt. 732 98833 Step...',
     action: 'Details'
   },
-
+  {
+    customer: 'Cody',
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    customer: 'Simmon',
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    status: 'Scheduled',
+    createdOn: 'Sept 21, 2023',
+    location: '8794 Bogan Flats, ...',
+    action: 'Details'
+  },
+  {
+    customer: 'Oregon',
+    img: campaignDefaultImg,
+    campaignName: 'Last Release of a new batch',
+    status: 'Delivered',
+    createdOn: 'Sept 21, 2023',
+    location: 'Suite 942 25514 DuBu...',
+    action: 'Details'
+  },
+  {
+    customer: 'Nevada',
+    img: campaignShadowImg,
+    campaignName: 'Our New Product',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    customer: 'Mc coy',
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Suite 942 25514 DuBu...',
+    action: 'Details'
+  },
+  {
+    customer: 'Weeb',
+    img: campaignDefaultImg,
+    campaignName: 'Last Release of a new batch',
+    status: 'Delivered',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    customer: 'Howard',
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    status: 'Scheduled',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    customer: 'Cody',
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    customer: 'Oregon',
+    img: campaignDefaultImg,
+    campaignName: 'Last Release of a new batch',
+    status: 'Delivered',
+    createdOn: 'Sept 21, 2023',
+    location: 'Suite 942 25514 DuBu...',
+    action: 'Details'
+  },
+  {
+    customer: 'Simmon',
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    status: 'Scheduled',
+    createdOn: 'Sept 21, 2023',
+    location: '8794 Bogan Flats, ...',
+    action: 'Details'
+  },
+  {
+    customer: 'Nevada',
+    img: campaignShadowImg,
+    campaignName: 'Our New Product',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    customer: 'Howard',
+    img: campaignDefaultImg,
+    campaignName: 'First Purchase Celebration',
+    status: 'Scheduled',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
+  {
+    customer: 'Mc coy',
+    img: campaignShadowImg,
+    campaignName: 'Happy Birthday',
+    status: 'Sent Out',
+    createdOn: 'Sept 21, 2023',
+    location: 'Suite 942 25514 DuBu...',
+    action: 'Details'
+  },
+  {
+    customer: 'Weeb',
+    img: campaignDefaultImg,
+    campaignName: 'Last Release of a new batch',
+    status: 'Delivered',
+    createdOn: 'Sept 21, 2023',
+    location: 'Apt. 732 98833 Step...',
+    action: 'Details'
+  },
 ]
 
 export const customerDetailStatuslist = [

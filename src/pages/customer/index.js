@@ -9,6 +9,8 @@ import CustomerDetailModal from '../../components/modal/CustomerDetailModal'
 const CustomerPage = () => {
 
   const [showCustomerDetail, setShowCustomerDetail] = useState(false);
+
+
   return (
     <div className='common_section_margin'>
       {

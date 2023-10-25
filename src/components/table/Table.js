@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { campaignColumnData, campaignRowData } from '../../data/campaign-data'
@@ -6,6 +6,17 @@ import Pagination from '../pagination/Pagination'
 import { DisabledBadge, SuccessBadge } from '../shared/badges'
 
 const CustomTableComponent = () => {
+  const [currentPage, setCurrentPage] = useState(1)
+  const [rowDataList, setRowDataList] = useState(campaignRowData)
+
+  const itemPerPage = 7
+  const totalPages = campaignRowData?.length
+
+  const endIndex = currentPage * itemPerPage
+  const startIndex = endIndex - itemPerPage
+
+
+  const updatedRowList = rowDataList.slice(startIndex, endIndex)
   return (
     <div className='custom_table_section'>
       <div className='custom_table_container'>
@@ -28,10 +39,10 @@ const CustomTableComponent = () => {
           </thead>
           <tbody>
             {
-              campaignRowData?.length ?
-                campaignRowData.map(row => {
+              updatedRowList?.length ?
+                updatedRowList.map((row, index) => {
                   return (
-                    <tr key={row?.id}>
+                    <tr key={row?.index}>
                       <td className="common_campaign_heading sf_pro_font_400w_16f">
                         <span className="mx-2 ">
                           <img src={row?.img} alt='campaign-defalut-img' className='img-fluid' />
@@ -60,7 +71,7 @@ const CustomTableComponent = () => {
                         {row?.stopDate}
                       </td>
                       <td className='common_campaign_heading sf_pro_font_400w_16f campaign_detail'>
-                        <Link to={`/campaign/${row?.id}`}>
+                        <Link to={`/campaign/${index + 1}`}>
                           {row?.action}
                         </Link>
                       </td>
@@ -71,7 +82,7 @@ const CustomTableComponent = () => {
           </tbody>
         </Table>
       </div>
-      <Pagination />
+      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} rowDataList={rowDataList} itemPerPage={itemPerPage} totalPages={totalPages} />
     </div>
   )
 }
