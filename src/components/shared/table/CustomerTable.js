@@ -7,11 +7,11 @@ import { customerDetailStatuslist } from '../../../data/campaign-data'
 
 const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
 
-  const [selectedItem, setSelectedItem] = useState('')
-
-
-  const handleSelectStatus = (e) => {
-    setSelectedItem(e.target.textContent)
+  const [rowDataList, setRowDataList] = useState(rowData)
+  const handleSelectStatus = (e, index) => {
+    let newArray = [...rowDataList]
+    newArray[index].status = e.target.textContent
+    setRowDataList(newArray)
   }
 
   const handleCustomerDetail = () => {
@@ -39,8 +39,8 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
           </thead>
           <tbody>
             {
-              rowData?.length ?
-                rowData.map(row => {
+              rowDataList?.length ?
+                rowDataList.map((row, index) => {
                   return (
                     <tr key={row?.id}>
                       <td className="common_campaign_heading sf_pro_font_400w_16f">
@@ -65,7 +65,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                                 customerDetailStatuslist?.length ?
                                   customerDetailStatuslist?.map((e) => {
                                     return (
-                                      <li key={e}><a class="dropdown-item" href="#" onClick={handleSelectStatus} >{e}</a></li>
+                                      <li key={e}><a class="dropdown-item" href="#" onClick={(e) => handleSelectStatus(e, index)} >{e}</a></li>
                                     )
                                   }) : null
                               }
