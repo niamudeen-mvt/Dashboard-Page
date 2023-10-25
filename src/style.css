@@ -526,7 +526,6 @@ input::-moz-focus-inner {
   min-height: 233.65px;
 }
 .postcard_detail_section .design_section .design_card h2 {
-  font-family: Inter;
   font-size: 28px;
   font-weight: 500;
   line-height: 41px;
@@ -540,10 +539,6 @@ input::-moz-focus-inner {
   font-weight: 400;
   line-height: 16px;
 }
-
-/* .postcard_detail_section .design_section .img_section img {
-  width: 100%;
-} */
 
 .postcard_detail_section .design_section .img_overlay {
   inset: 0;

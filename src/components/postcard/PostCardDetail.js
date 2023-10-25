@@ -1,39 +1,29 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import pendingIcon from "../../assets/icons/customer-pending-icon.svg"
-
 import sentIcon from "../../assets/icons/postcard-sent-icon.svg"
 import postCardDesignImg from "../../assets/images/postcard-design-img1.png"
 import postCardShadowImg from "../../assets/images/postcard-shadow-img.png"
 import { Link } from 'react-router-dom'
 import DownloadCustomerDetail from '../shared/button'
+import SectionHeading from '../shared/SectionHeading'
+import PostStatusCard from './PostStatusCard'
 
 const PostCardDetail = () => {
   return (
     <section className='postcard_detail_section bg-white border_radius_26 mb-5'>
-      <div className='top_content mb-5'>
-        <h2 className='sf_pro_font_700 mb-3'>Postcard Detail</h2>
-      </div>
+
+      <SectionHeading mainHeading="Postcard Detail" topMargin="mb-5" />
 
 
       {/* =========== customer-card ============ */}
       <div className='card_section mb-5'>
         <Row >
-          <Col className='col-6 d-flex'>
-            <div className='post_card transition_5s cursor border_radius_9'>
-              <div className='status_badge pending d-flex justify-content-center align-items-center '>
-                <img src={pendingIcon} alt='pending-icon' />
-              </div>
-              <p className='main_heading my-3'>Customer Pending</p>
-              <p className='count'>23</p>
-            </div>
-            <div className='post_card transition_5s cursor border_radius_9 mx-4'>
-              <div className='status_badge sent d-flex justify-content-center align-items-center'>
-                <img src={sentIcon} alt='sent-icon' />
-              </div>
-              <p className='main_heading my-3 '>Sent</p>
-              <p className='count'>66</p>
-            </div>
+          <Col className='col-2'>
+            <PostStatusCard type="pending" icon={pendingIcon} mainHeading="Customer Pending" count="23" />
+          </Col>
+          <Col className='col-2 mx-4'>
+            <PostStatusCard type="sent" icon={sentIcon} mainHeading="Sent" count="66" verticalMarign="mx-4" />
           </Col>
         </Row>
       </div>
