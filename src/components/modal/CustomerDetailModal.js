@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, ModalBody, Container, Row, Col } from 'reactstrap';
 import DownloadCustomerDetail from '../shared/button';
 import closeIcon from "../../assets/icons/close-icon.svg"
-import { CustomerBadge, DisabledBadge } from '../shared/badges';
+import { DisabledBadge } from '../shared/badges';
 
 function CustomerDetailModal({ showCustomerDetail, setShowCustomerDetail }) {
   const toggle = () => setShowCustomerDetail(!showCustomerDetail);

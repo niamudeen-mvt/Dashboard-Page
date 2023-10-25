@@ -10,10 +10,6 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
   const routeName = useLocation()?.pathname
 
-  console.log(routeName?.split("/")[1], "routeName <<<<<<<<<<<");
-
-
-
   const mainContainerStyles = {
     width: '83%',
   }

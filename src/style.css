@@ -98,7 +98,7 @@ input::-moz-focus-inner {
   -o-border-radius: 26px;
 }
 
-/* ========================= fonts =================== */
+/* ========================= SF PRO DISPLAY FONT =================== */
 
 .sf_pro_font_400 {
   font-family: SF Pro Display;
@@ -106,15 +106,16 @@ input::-moz-focus-inner {
   line-height: 24px;
 }
 
-.sf_pro_font_400w_14f {
-  font-family: SF Pro Display;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-}
 .sf_pro_font_400w_12f {
   font-family: SF Pro Display;
   font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  /* color: #373737; */
+}
+.sf_pro_font_400w_14f {
+  font-family: SF Pro Display;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
 }
@@ -148,6 +149,8 @@ input::-moz-focus-inner {
   color: #202223;
 }
 
+/* ================== SF PRO TEXT ================== */
+
 .sf_pro_text {
   font-family: SF Pro Text;
   line-height: 20px;
@@ -160,10 +163,11 @@ input::-moz-focus-inner {
   line-height: 20px;
   color: black;
 }
+
+/* ======================= INTER FONT ============== */
 .interfont_18s_500w {
   color: #161616;
   font-size: 18px;
-  font-style: normal;
   font-weight: 500;
   line-height: 20px;
 }

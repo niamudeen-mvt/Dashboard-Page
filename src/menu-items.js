@@ -11,28 +11,28 @@ import settingsActiveIcon from "./assets/icons/active-settings-icon.svg"
 
 export const menuItems = [
   {
-    id: 1,
+    id: 'campaign',
     title: 'Campaign',
     url: '/campaign',
     icon: campaignIcon,
     activeIcon: campaignActiveIcon
   },
   {
-    id: 2,
+    id: 'contacts',
     title: 'Contacts',
     url: '/contacts',
     icon: contactIcon,
     activeIcon: contactActiveIcon
   },
   {
-    id: 3,
+    id: 'overview',
     title: 'Overview',
     url: '/overview',
     icon: overViewIcon,
     activeIcon: overviewActiveIcon
   },
   {
-    id: 4,
+    id: 'settings',
     title: 'Settings',
     url: '/settings',
     icon: settingIcon,
