@@ -55,9 +55,9 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
 
       <Container className='container'>
-        {
+        {/* {
           routeName === "/campaign" ? <SearchBar /> : null
-        }
+        } */}
         {/* ================== pages data ============== */}
         <section className='mx-5'>
           {children}

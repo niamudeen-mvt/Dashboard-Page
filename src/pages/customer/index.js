@@ -17,7 +17,6 @@ const CustomerPage = () => {
         showCustomerDetail ? <CustomerDetailModal setShowCustomerDetail={setShowCustomerDetail} showCustomerDetail={showCustomerDetail} /> : null
       }
       <SectionHeading mainHeading="Customer Detail" />
-      <SearchBar />
       <CustomerTable coloumnData={customerColumnsData} rowData={customerRowData} setShowCustomerDetail={setShowCustomerDetail} showCustomerDetail={showCustomerDetail} />
     </div>
   )
