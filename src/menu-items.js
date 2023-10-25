@@ -9,7 +9,7 @@ export const menuItems = [
   {
     id: 1,
     title: 'Campaign',
-    url: '/',
+    url: '/campaign',
     icon: campaignIcon,
     activeIcon: campaignActiveIcon
   },

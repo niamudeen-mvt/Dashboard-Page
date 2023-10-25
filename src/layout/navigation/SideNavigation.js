@@ -7,8 +7,9 @@ import { menuItems } from '../../menu-items'
 
 const SideNaviagation = ({ isNavOpen }) => {
 
-  const routeName = (useLocation())?.pathname
-  console.log(routeName, "route", routeName.split(''));
+  const routeName = (useLocation()).pathname
+  const subRoute = routeName?.substring(0, 9)
+
 
 
   const sideNavigationStyles = {
@@ -38,9 +39,9 @@ const SideNaviagation = ({ isNavOpen }) => {
                   menuItems?.length ?
                     menuItems.map(menu => {
                       return (
-                        <Link to={menu?.url} key={menu?.id} className={`w-100 py-3 mb-4 text-white d-flex justify-content-start align-items-center border_radius_12 nav_link ${(routeName === menu?.url) ? 'active' : ''}`}>
+                        <Link to={menu?.url} key={menu?.id} className={`w-100 py-3 mb-4 text-white d-flex justify-content-start align-items-center border_radius_12 nav_link ${(routeName === menu?.url || subRoute === menu?.url) ? 'active' : ''}`}>
                           <span className='mx-4'>
-                            <img src={((routeName === menu?.url) && menu?.id === 1) ? menu.activeIcon : menu.icon} style={{ backgroundColor: (menu?.id === 1 && routeName === menu?.url) ? 'white' : routeName !== menu?.url ? 'transparent' : '#219fff' }} alt='icon' />
+                            <img src={((routeName === menu?.url || subRoute === menu?.url) && menu?.id === 1) ? menu.activeIcon : menu.icon} style={{ backgroundColor: (menu?.id === 1 && routeName === menu?.url) ? 'white' : routeName !== menu?.url ? 'transparent' : '#219fff' }} alt='icon' />
                           </span>
                           <p>
                             {menu?.title}

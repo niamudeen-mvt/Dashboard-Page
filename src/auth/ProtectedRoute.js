@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MainLayout from '../layout/index'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 const ProtectedRoute = ({ children }) => {
 
-  // consider user is login
+  const navigate = useNavigate()
+  // consider user is authenticated
   let isAuthenticated = true
+
+  useEffect(() => {
+    navigate("/campaign")
+  }, [])
+
 
 
   return (

@@ -1,14 +1,16 @@
 import React from 'react'
-import userIcon from "../../assets/icons/user-icon.svg"
-import { Container } from 'reactstrap'
 import { useLocation } from 'react-router-dom'
-import NavBarComponent from '../../components/navbar'
+import { Container } from 'reactstrap'
+import userIcon from "../../assets/icons/user-icon.svg"
+import SearchBar from '../../components/navbar'
 // import menuIcon from "../../assets/icons/menu-icon.svg"
 // import closeIcon from "../../assets/icons/close-icon.svg"
 
 const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
   const routeName = useLocation()?.pathname
+
+  console.log(routeName?.split("/")[1], "routeName <<<<<<<<<<<");
 
 
 
@@ -58,8 +60,8 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
 
       <Container className='container'>
         {
-          routeName === "/" ? <NavBarComponent /> : null}
-
+          routeName === "/campaign" ? <SearchBar /> : null
+        }
         {/* ================== pages data ============== */}
         <section className='mx-5'>
           {children}

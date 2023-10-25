@@ -3,9 +3,7 @@ import CustomTable from "../../components/table/Table"
 
 const CampaignPage = () => {
   return (
-    <div >
-      <CustomTable />
-    </div>
+    <CustomTable />
   )
 }
 

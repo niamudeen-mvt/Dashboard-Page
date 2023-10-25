@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
 import { campaignDetailColumnsData } from '../../data/campaign-data'
 import { customerList } from '../../data/campaign-data'
@@ -9,7 +9,9 @@ import SectionHeading from '../../components/common/SectionHeading'
 
 
 const CampaignDetail = () => {
-  const { id } = useParams()
+  // const { id } = useParams()
+
+
 
   const updatedRowData = [{
     id: 1,
