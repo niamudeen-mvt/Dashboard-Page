@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import DownloadCustomerDetail from '../shared/button'
 import SectionHeading from '../shared/SectionHeading'
 import PostStatusCard from './PostStatusCard'
-import PostImageCard, { PostImageCard1, PostImageCard2 } from './PostImageCard'
+import { PostImageCard1, PostImageCard2 } from './PostImageCard'
 
 const PostCardDetail = () => {
   return (
@@ -31,18 +31,24 @@ const PostCardDetail = () => {
             Design
           </p>
         </div>
-        <div className='postcard_img_grid '>
-          <PostImageCard1 />
-          <PostImageCard2 />
-          <div className='design_card'>
-            <h2>
-              You can download The design from here
-            </h2>
-            <Link to="#" className='sf_pro_font_400 common_link_color'>
-              Download Design
-            </Link>
-          </div>
-        </div>
+        <Row>
+          <Col className='col-xxl-6 col-xl-12  mb-3'>
+            <div className='postcard_img_grid'>
+              <PostImageCard1 />
+              <PostImageCard2 />
+            </div>
+          </Col>
+          <Col className='offset-xxl-2 col-xxl-4 col-xl-12 '>
+            <div className='design_card '>
+              <h2>
+                You can download The design from here
+              </h2>
+              <Link to="#" className='sf_pro_font_400 common_link_color'>
+                Download Design
+              </Link>
+            </div>
+          </Col>
+        </Row>
         <DownloadCustomerDetail />
       </div>
     </section >

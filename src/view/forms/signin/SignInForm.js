@@ -14,7 +14,6 @@ const SignInForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (user?.email !== "" && user?.password !== "") {
       localStorage.setItem('user', JSON.stringify(user))
       navigate("/dashboard/campaign")

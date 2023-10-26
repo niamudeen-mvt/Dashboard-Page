@@ -580,8 +580,10 @@ input::-moz-focus-inner {
 }
 
 .postcard_detail_section .design_section .design_card {
-  max-width: 331.61px;
   min-height: 233.65px;
+}
+.postcard_detail_section .design_section .design_card .img_section {
+  min-height: 186.5px;
 }
 .postcard_detail_section .design_section .design_card h2 {
   font-size: 28px;
@@ -742,15 +744,10 @@ input::-moz-focus-inner {
 /* ====================== GRID ============================ */
 
 .postcard_img_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(331.61px, 1fr));
+  display: flex;
   gap: 63px;
 }
-.postcard_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(233px, 1fr));
-  gap: 30px;
-}
+.postcard_grid,
 .setting_tab_grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(233px, 1fr));
