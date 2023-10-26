@@ -8,7 +8,7 @@ import ResetPassword from '../forms/ResetPassword'
 const SettingsPage = () => {
   const [tab, setTab] = useState(1)
   return (
-    <div className='setting_section mt-5'>
+    <section className='setting_section mt-5'>
       <SectionHeading mainHeading="Settings" />
       <Row className='common_section_content_margin'>
         <Col className='col-3 '>
@@ -42,7 +42,7 @@ const SettingsPage = () => {
           :
           <ResetPassword />
       }
-    </div>
+    </section>
   )
 }
 

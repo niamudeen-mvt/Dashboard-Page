@@ -263,8 +263,17 @@ input::-moz-focus-inner {
 
 /* ============= Container ================ */
 
-.section_container {
+.campaign_seciton_container {
   padding: 0 19.61px;
+}
+.campaign_detail_section_container {
+  padding: 0 56.47px 0 40.53px;
+}
+.customer_detail_section {
+  padding: 0 113px 0 83px;
+}
+.setting_section {
+  padding: 0 47px 0 42px;
 }
 
 /* ============ search navbar =============== */
@@ -448,11 +457,14 @@ input::-moz-focus-inner {
 }
 
 /* ================ campagin details ============== */
-
 .campaign_detail_section,
 .postcard_detail_section {
   padding: 41px 34px;
 }
+/* .campaign_detail_section,
+.postcard_detail_section {
+  padding: 41px 34px;
+} */
 
 .campaign_detail_section .download_capmpaign_details button,
 .postcard_detail_section .download_capmpaign_details button {

@@ -52,10 +52,7 @@ const MainContainer = ({ isNavOpen, setIsNavOpen, children }) => {
           <img src={userIcon} alt='user-icon' />
         </div>
       </div> */}
-
-      <section className='section_container'>
-        {children}
-      </section>
+      {children}
     </div >
   )
 }

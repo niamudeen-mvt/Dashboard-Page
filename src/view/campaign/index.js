@@ -3,7 +3,9 @@ import CampaignTable from '../../components/table/CampaignTable'
 
 const CampaignPage = () => {
   return (
-    <CampaignTable />
+    <section className='campaign_seciton_container'>
+      <CampaignTable />
+    </section>
   )
 }
 

@@ -27,8 +27,8 @@ const CampaignDetail = () => {
 
 
   return (
-    <>
-      <section className='campaign_detail_section bg-white border_radius_26 mb-3'>
+    <section className='campaign_detail_section_container'>
+      <div className='campaign_detail_section bg-white border_radius_26 mb-3 bg-info'>
         <SectionHeading mainHeading="Campaign Detail" subHeading="Campaign Information" />
         <CampaignCustomInput />
         <CampaignTable coloumnData={campaignDetailColumnsData} rowData={updatedRowData} />
@@ -60,9 +60,9 @@ const CampaignDetail = () => {
             See all customers details
           </Link>
         </div>
-      </section >
+      </div >
       <PostCardDetail />
-    </>
+    </section>
   )
 }
 
