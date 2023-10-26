@@ -32,7 +32,10 @@ const CampaignDetail = () => {
         <SectionHeading mainHeading="Campaign Detail" subHeading="Campaign Information" />
         <CampaignCustomInput />
         <CampaignTable coloumnData={campaignDetailColumnsData} rowData={updatedRowData} />
-        <DownloadCustomerDetail margin="mb-4" />
+
+        <DownloadCustomerDetail margin="mb-4" actionType="campaign-detail" tableId="customer_table_detail" fileName="customer_table_detail" />
+
+
         <div className='customers_list_section mb-3 '>
           <Row className='py-3 '>
             <Col className='col-3 subtitle'>
@@ -62,7 +65,7 @@ const CampaignDetail = () => {
         </div>
       </div >
       <PostCardDetail />
-    </section>
+    </section >
   )
 }
 

@@ -1,7 +1,8 @@
 
 import campaignDefaultImg from "../../assets/images/campaign-default-img.png"
 import campaignShadowImg from "../../assets/images/campaign-img.png"
-
+import postCardDesignImg from "../../assets/images/postcard-design-img1.png"
+import postCardShadowImg from "../../assets/images/postcard-shadow-img.png"
 // ========================== campaign ==================
 
 
@@ -605,4 +606,14 @@ export const customerDetailStatuslist = [
   "Sent Out",
   "Scheduled",
   "Delivered"
+]
+
+export const postcardImageList = [
+  {
+    filename: 'postcard-img1',
+    url: postCardDesignImg
+  }, {
+    filename: 'postcard-img2',
+    url: postCardShadowImg
+  }
 ]

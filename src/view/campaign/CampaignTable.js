@@ -9,7 +9,7 @@ const CampaignTable = ({ rowData, coloumnData }) => {
       <div className='custom_table_container pb-0' style={{
         border: '1px solid #DBDBDB'
       }}>
-        <Table responsive className='table' >
+        <Table responsive className='table' id="customer_table_detail">
           <thead>
             <tr>
               {

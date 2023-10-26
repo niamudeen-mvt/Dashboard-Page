@@ -8,6 +8,7 @@ import DownloadCustomerDetail from '../shared/button'
 import SectionHeading from '../shared/SectionHeading'
 import PostStatusCard from './PostStatusCard'
 import { PostImageCard1, PostImageCard2 } from './PostImageCard'
+import { postcardImageList } from '../../utils/constant/campaign-data'
 
 const PostCardDetail = () => {
   return (
@@ -49,7 +50,8 @@ const PostCardDetail = () => {
             </div>
           </Col>
         </Row>
-        <DownloadCustomerDetail />
+        <DownloadCustomerDetail listToDownload={postcardImageList} actionType="postcard-detail"
+        />
       </div>
     </section >
   )
