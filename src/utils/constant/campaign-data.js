@@ -283,6 +283,12 @@ export const campaignDetailColumnsData = [
 
 ]
 
+export const campaignStatusList = [
+  "All",
+  "On Going",
+  "Paused"
+]
+
 // ========================== customer data ========================
 
 
@@ -595,6 +601,7 @@ export const customerRowData = [
 ]
 
 export const customerDetailStatuslist = [
+  "All",
   "Sent Out",
   "Scheduled",
   "Delivered"

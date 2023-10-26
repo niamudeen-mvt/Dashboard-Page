@@ -3,7 +3,7 @@ import Filter from './Filter'
 import SearcInput from './SearcInput'
 import { useLocation } from 'react-router-dom'
 
-const SearchBar = ({ query, setQuery }) => {
+const SearchBar = ({ query, setQuery, statusList, selectedFilterStatus, setSelectedFilterStatus }) => {
   const routeName = useLocation().pathname
   return (
     <div className='search_navbar mb-5 p-0'>
@@ -18,7 +18,9 @@ const SearchBar = ({ query, setQuery }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <Filter />
+            <Filter statusList={statusList} selectedFilterStatus={selectedFilterStatus}
+              setSelectedFilterStatus={setSelectedFilterStatus}
+            />
             <SearcInput query={query} setQuery={setQuery} />
           </div>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
-import CustomTable from "../../components/table/Table"
+import CampaignTable from '../../components/table/CampaignTable'
 
 const CampaignPage = () => {
   return (
-    <CustomTable />
+    <CampaignTable />
   )
 }
 

@@ -18,6 +18,13 @@ export const menuItems = [
     activeIcon: campaignActiveIcon
   },
   {
+    id: 'customer',
+    title: 'Customer',
+    url: '/customer',
+    icon: contactIcon,
+    activeIcon: contactActiveIcon
+  },
+  {
     id: 'contacts',
     title: 'Contacts',
     url: '/contacts',

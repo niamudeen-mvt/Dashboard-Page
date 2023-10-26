@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import Pagination from '../../pagination/Pagination'
-import SearchBar from '../../navbar'
-import { DisabledBadge, ProgressBadge, SuccessBadge } from '../badges'
-import { customerDetailStatuslist } from '../../../utils/constant/campaign-data'
+import Pagination from '../pagination/Pagination'
+import SearchBar from '../navbar'
+import { DisabledBadge, ProgressBadge, SuccessBadge } from '../shared/badges'
+import { customerDetailStatuslist } from '../../utils/constant/campaign-data'
 
 const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
+
+
   const [rowDataList, setRowDataList] = useState(rowData)
   const [currentPage, setCurrentPage] = useState(1)
   const [query, setQuery] = useState("")
   const [updatedRowList, setUpdatedRowList] = useState([])
+  const [selectedFilterStatus, setSelectedFilterStatus] = useState('Filter')
 
   const handleSelectStatus = (e, index) => {
     let newArray = [...rowDataList]
@@ -27,10 +30,19 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
   const endIndex = currentPage * itemPerPage
   const startIndex = endIndex - itemPerPage
 
+  // ===================== filter functionality ==============
   useEffect(() => {
-    setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
-  }, [startIndex, endIndex])
+    if (selectedFilterStatus !== "" && selectedFilterStatus !== "All") {
+      let upadatedList = rowData?.filter(row => row?.status === selectedFilterStatus)
+      setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
+    } else {
+      // setting it to default 
+      setUpdatedRowList(rowData.slice(startIndex, endIndex))
+    }
+  }, [selectedFilterStatus, startIndex, endIndex])
 
+
+  // ============== search functionlaity ======================
 
   useEffect(() => {
     if (query?.length > 0) {
@@ -46,7 +58,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
 
   return (
     <>
-      <SearchBar query={query} setQuery={setQuery} />
+      <SearchBar query={query} setQuery={setQuery} statusList={customerDetailStatuslist} selectedFilterStatus={selectedFilterStatus} setSelectedFilterStatus={setSelectedFilterStatus} />
       <div className='custom_table_section'>
         <div className='custom_table_container'>
           <Table responsive className='table' >
@@ -92,7 +104,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                               <ul class="dropdown-menu">
                                 {
                                   customerDetailStatuslist?.length ?
-                                    customerDetailStatuslist?.map((e) => {
+                                    customerDetailStatuslist?.filter(e => e !== "All").map((e) => {
                                       return (
                                         <li key={e}><a class="dropdown-item" href="#" onClick={(e) => handleSelectStatus(e, index)} >{e}</a></li>
                                       )
@@ -119,7 +131,10 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                         </td>
                       </tr>
                     )
-                  }) : null
+                  }) :
+                  <div className='w-50 position-absolute text-center'>
+                    <p className='sf_pro_font_400w_12f p-0'>No Data to Display</p>
+                  </div>
               }
             </tbody>
           </Table>

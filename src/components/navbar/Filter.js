@@ -1,19 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Filter = () => {
+const Filter = ({ selectedFilterStatus, setSelectedFilterStatus, statusList }) => {
 
-  const [selectedItem, setSelectedItem] = useState('Filter')
+
   const handleSelect = (e) => {
-    setSelectedItem(e.target.textContent)
+    setSelectedFilterStatus(e.target.textContent)
   }
   return (
     <div class="dropdown ms-auto filter_container">
       <button class="dropdown-toggle w-100 border border_radius_12 sf_pro_text_500w_14f" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        {selectedItem}
+        {selectedFilterStatus}
       </button>
       <ul class="dropdown-menu">
-        <li ><a class="dropdown-item sf_pro_text_500w_14f" href="#" onClick={handleSelect}>Test 1</a></li>
-        <li ><a class="dropdown-item sf_pro_text_500w_14f" href="#" onClick={handleSelect}>Test 2</a></li>
+        {
+          statusList?.length ?
+            statusList?.map(e => {
+              return (
+                <li key={e}><a class="dropdown-item sf_pro_text_500w_14f" href="#" onClick={handleSelect}>{e}</a></li>
+              )
+            }) : <li ><a class="dropdown-item sf_pro_text_500w_14f" href="#" onClick={handleSelect}>No Status Available</a></li>
+        }
       </ul>
     </div>
   )

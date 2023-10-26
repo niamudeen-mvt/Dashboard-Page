@@ -17,6 +17,7 @@ const App = () => {
           <Route path="campaign" element={<CampaignPage />} />
           <Route path="campaign/:id" element={<CampaignDetail />} />
           <Route path="campaign/customers" element={<CustomerPage />} />
+          <Route path="customer" element={<CustomerPage />} />
           <Route path="contacts" element={<ContactPage />} />
           <Route path="overview" element={<OverviewPage />} />
           <Route path="settings" element={<SettingsPage />} />

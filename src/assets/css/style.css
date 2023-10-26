@@ -63,6 +63,10 @@ input::-moz-focus-inner {
   border: 0;
 }
 
+.cursor {
+  cursor: pointer !important;
+}
+
 /* ============ transitions =========== */
 
 .transition_5s {
@@ -214,7 +218,6 @@ input::-moz-focus-inner {
   height: 56px;
   background-color: transparent;
   border: 1px solid #8c8c8c !important;
-  /* padding: 16px, 228px, 16px, 18px; */
 }
 
 .custom_btn_section .download_btn {
@@ -225,6 +228,12 @@ input::-moz-focus-inner {
   font-weight: 500;
   color: var(--white-color);
   background-color: var(--side-navigation-color);
+}
+.custom_btn_section .download_btn:hover,
+.custom_theme_btn:hover {
+  color: var(--side-navigation-color);
+  border: 2px solid var(--side-navigation-color);
+  background-color: transparent;
 }
 
 .custom_btn_section .cancel_btn {

@@ -5,10 +5,13 @@ import { campaignColumnData, campaignRowData } from '../../utils/constant/campai
 import Pagination from '../pagination/Pagination'
 import { DisabledBadge, SuccessBadge } from '../shared/badges'
 import SearchBar from '../navbar'
+import { campaignStatusList } from '../../utils/constant/campaign-data'
 
-const CustomTableComponent = () => {
+const CampaignTable = () => {
+
+
   const [currentPage, setCurrentPage] = useState(1)
-  const [rowDataList, setRowDataList] = useState(campaignRowData)
+  const [selectedFilterStatus, setSelectedFilterStatus] = useState('Filter')
   const [query, setQuery] = useState("")
   const [updatedRowList, setUpdatedRowList] = useState([])
 
@@ -18,26 +21,38 @@ const CustomTableComponent = () => {
   const endIndex = currentPage * itemPerPage
   const startIndex = endIndex - itemPerPage
 
-  useEffect(() => {
-    setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
-  }, [startIndex, endIndex])
 
+  // ===================== filter functionality ==============
+  useEffect(() => {
+    if (selectedFilterStatus !== "" && selectedFilterStatus !== "All") {
+      let upadatedList = campaignRowData?.filter(row => row?.status === selectedFilterStatus)
+      setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
+    } else {
+      // setting it to default 
+      setUpdatedRowList(campaignRowData.slice(startIndex, endIndex))
+    }
+  }, [selectedFilterStatus, startIndex, endIndex])
+
+
+  // ============== search functionlaity ======================
 
   useEffect(() => {
     if (query?.length > 0) {
-      let upadatedList = rowDataList?.filter(row => {
+      let upadatedList = campaignRowData?.filter(row => {
         return row.campaignName?.toLowerCase().includes(query.toLowerCase())
       })
       setUpdatedRowList(upadatedList)
     } else {
-      setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
+      setUpdatedRowList(campaignRowData.slice(startIndex, endIndex))
     }
   }, [query])
 
 
+
+
   return (
     <>
-      <SearchBar query={query} setQuery={setQuery} />
+      <SearchBar query={query} setQuery={setQuery} statusList={campaignStatusList} selectedFilterStatus={selectedFilterStatus} setSelectedFilterStatus={setSelectedFilterStatus} />
       <div className='custom_table_section'>
         <div className='custom_table_container'>
           <Table responsive className='table' >
@@ -97,15 +112,18 @@ const CustomTableComponent = () => {
                         </td>
                       </tr>
                     )
-                  }) : null
+                  }) :
+                  <div className='w-50 position-absolute text-center'>
+                    <p className='sf_pro_font_400w_12f p-0'>No Data to Display</p>
+                  </div>
               }
             </tbody>
           </Table>
         </div>
-        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} rowDataList={rowDataList} itemPerPage={itemPerPage} totalPages={totalPages} />
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} rowDataList={updatedRowList} itemPerPage={itemPerPage} totalPages={totalPages} />
       </div>
     </>
   )
 }
 
-export default CustomTableComponent
+export default CampaignTable

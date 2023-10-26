@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import SectionHeading from "../../components/shared/SectionHeading"
-import CustomerTable from '../../components/shared/table/CustomerTable'
+import CustomerTable from '../../components/table/CustomerTable'
 import { customerColumnsData, customerRowData } from '../../utils/constant/campaign-data'
 import CustomerDetailModal from '../../components/modal/CustomerDetailModal'
 

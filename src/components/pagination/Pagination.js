@@ -11,18 +11,19 @@ const Pagination = ({ currentPage, setCurrentPage, rowDataList, itemPerPage, tot
   }
 
   const handleNextPage = () => {
-    if ((currentPage * itemPerPage) < totalPages) {
+    if (((currentPage * itemPerPage) < totalPages) && rowDataList?.length > 0) {
       setCurrentPage(currentPage + 1)
     }
   }
   return (
     <div className='d-flex justify-content-end align-items-center pagination_section mt-2'>
       <div>
-        <span className='prev_btn px-3 py-2' onClick={handlePrevPage}>
+        <span className='prev_btn px-3 py-2 cursor' onClick={handlePrevPage}>
           <img src={prevIcon} alt="prev-icon-img" />
         </span>
-        <span className='page_count mx-3 sf_pro_text_400w_12f text-cener'>1 of {currentPage} page</span>
-        <span className='next_btn px-3 py-2' onClick={handleNextPage}>
+        <span className='page_count mx-3 sf_pro_text_400w_12f text-center'>{currentPage} page</span>
+        {/* <span className='page_count mx-3 sf_pro_text_400w_12f text-cener'>1 of {currentPage} page</span> */}
+        <span className='next_btn px-3 py-2 cursor' onClick={handleNextPage}>
           <img src={rightIcon} alt="next-icon-img" />
         </span>
       </div>
