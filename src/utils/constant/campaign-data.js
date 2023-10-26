@@ -1,6 +1,6 @@
 
-import campaignDefaultImg from "../assets/images/campaign-default-img.png"
-import campaignShadowImg from "../assets/images/campaign-img.png"
+import campaignDefaultImg from "../../assets/images/campaign-default-img.png"
+import campaignShadowImg from "../../assets/images/campaign-img.png"
 
 // ========================== campaign ==================
 

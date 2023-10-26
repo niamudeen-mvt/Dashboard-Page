@@ -1,13 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import CampaignPage from './pages/campaign'
-import ProtectedRoute from './auth/ProtectedRoute'
-import ContactPage from './pages/contact'
-import OverviewPage from './pages/overview'
-import SettingsPage from './pages/settings'
-import CampaignDetail from './pages/campaign/CampaignDetail'
-import CustomerPage from './pages/customer'
-import ResetPassword from './pages/forms/ResetPassword'
+import CampaignPage from './view/campaign'
+import ProtectedRoute from './rotues/ProtectedRoute'
+import ContactPage from './view/contact'
+import OverviewPage from './view/overview'
+import SettingsPage from './view/settings'
+import CampaignDetail from './view/campaign/CampaignDetail'
+import CustomerPage from './view/customer'
 
 const App = () => {
 

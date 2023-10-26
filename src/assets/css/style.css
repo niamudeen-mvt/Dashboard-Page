@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: SF Pro Display;
-  src: url("./assets/fonts/SF_Pro-Display-Font-Family/SFPRODISPLAYREGULAR.OTF");
+  src: url("../fonts/SF_Pro-Display-Font-Family/SFPRODISPLAYREGULAR.OTF");
 }
 
 @font-face {
   font-family: SF Pro Text;
-  src: url("./assets/fonts/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf");
+  src: url("../fonts/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf");
 }
 
 * {
@@ -301,7 +301,7 @@ input::-moz-focus-inner {
 }
 
 .dropdown-toggle::after {
-  content: url("./assets/icons/down-arrow-icon.svg");
+  content: url("../icons/down-arrow-icon.svg");
   margin-left: 20px;
   border: none;
 }

@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import SectionHeading from "../../components/shared/SectionHeading"
-import SearchBar from '../../components/navbar'
 import CustomerTable from '../../components/shared/table/CustomerTable'
-import { customerColumnsData } from '../../data/campaign-data'
-import { customerRowData } from '../../data/campaign-data'
+import { customerColumnsData, customerRowData } from '../../utils/constant/campaign-data'
 import CustomerDetailModal from '../../components/modal/CustomerDetailModal'
 
 const CustomerPage = () => {

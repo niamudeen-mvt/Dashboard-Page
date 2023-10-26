@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Pagination from '../../pagination/Pagination'
 import SearchBar from '../../navbar'
 import { DisabledBadge, ProgressBadge, SuccessBadge } from '../badges'
-import { customerDetailStatuslist } from '../../../data/campaign-data'
+import { customerDetailStatuslist } from '../../../utils/constant/campaign-data'
 
 const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
   const [rowDataList, setRowDataList] = useState(rowData)
@@ -38,6 +38,8 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
         return row.customer?.toLowerCase().includes(query.toLowerCase())
       })
       setUpdatedRowList(upadatedList)
+    } else {
+      setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
     }
   }, [query])
 

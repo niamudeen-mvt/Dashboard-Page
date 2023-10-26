@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import { campaignColumnData, campaignRowData } from '../../data/campaign-data'
+import { campaignColumnData, campaignRowData } from '../../utils/constant/campaign-data'
 import Pagination from '../pagination/Pagination'
 import { DisabledBadge, SuccessBadge } from '../shared/badges'
 import SearchBar from '../navbar'
@@ -29,6 +29,8 @@ const CustomTableComponent = () => {
         return row.campaignName?.toLowerCase().includes(query.toLowerCase())
       })
       setUpdatedRowList(upadatedList)
+    } else {
+      setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
     }
   }, [query])
 

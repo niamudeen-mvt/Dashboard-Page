@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import logoutBtn from "../../assets/icons/logout-icon.svg"
-import { menuItems } from '../../menu-items'
+import { menuItems } from '../../utils/constant/menu-items'
 
 
 
