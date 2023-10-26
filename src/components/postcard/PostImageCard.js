@@ -8,7 +8,7 @@ export const PostImageCard1 = () => {
   return (
     <div className='design_card'>
       <div className='img_section mb-2 position-relative'>
-        <img src={postCardDesignImg} alt='img' />
+        <img src={postCardDesignImg} alt='img' className='img-fluid' />
         <div className='img_overlay position-absolute d-flex justify-content-center align-items-center'>
           <span>Thankyou</span>
         </div>
@@ -20,9 +20,9 @@ export const PostImageCard1 = () => {
 
 export const PostImageCard2 = () => {
   return (
-    <div className='design_card mx-5'>
+    <div className='design_card'>
       <div className='img_section mb-2 position-relative'>
-        <img src={postCardShadowImg} alt='img' />
+        <img src={postCardShadowImg} alt='img' className='img-fluid' />
         <div className='img_overlay2 position-absolute '>
           <span className='name mb-4'>Your Name</span>
           <p className='mb-2'>Address</p>

@@ -18,14 +18,10 @@ const PostCardDetail = () => {
 
       {/* =========== customer-card ============ */}
       <div className='card_section mb-5'>
-        <Row >
-          <Col className='col-2'>
-            <PostStatusCard type="pending" icon={pendingIcon} mainHeading="Customer Pending" count="23" />
-          </Col>
-          <Col className='col-2 mx-4'>
-            <PostStatusCard type="sent" icon={sentIcon} mainHeading="Sent" count="66" verticalMarign="mx-4" />
-          </Col>
-        </Row>
+        <div className='postcard_grid'>
+          <PostStatusCard type="sent" icon={sentIcon} mainHeading="Sent" count="66" />
+          <PostStatusCard type="pending" icon={pendingIcon} mainHeading="Customer Pending" count="23" />
+        </div>
       </div>
 
       {/* ================ design - card ========== */}
@@ -35,25 +31,20 @@ const PostCardDetail = () => {
             Design
           </p>
         </div>
-        <Row>
-          <Col className='col-8 d-flex'>
-            <PostImageCard1 />
-            <PostImageCard2 />
-          </Col>
-          <Col className='col-xl-offset-1 col-3'>
-            <div className='design_card'>
-              <h2>
-                You can download The design from here
-              </h2>
-              <Link to="#" className='sf_pro_font_400 common_link_color'>
-                Download Design
-              </Link>
-            </div>
-          </Col>
-        </Row>
+        <div className='postcard_img_grid '>
+          <PostImageCard1 />
+          <PostImageCard2 />
+          <div className='design_card'>
+            <h2>
+              You can download The design from here
+            </h2>
+            <Link to="#" className='sf_pro_font_400 common_link_color'>
+              Download Design
+            </Link>
+          </div>
+        </div>
+        <DownloadCustomerDetail />
       </div>
-
-      <DownloadCustomerDetail />
     </section >
   )
 }

@@ -8,13 +8,11 @@ const UserProfile = () => {
       <p className='sf_pro_font_700w_22f mb-3'>
         Profile
       </p>
-      <Row className=''>
-        <Col className='col-1 mx-5 p-0'>
-          <div className='d-flex justify-content-start align-items-center '>
-            <span className='user_icon d-flex justify-content-center align-items-center'>
-              <img src={userProfileIcon} alt='user-profile-icon' className='img-fluid' />
-            </span>
-          </div>
+      <Row className=' px-3'>
+        <Col className='col-2'>
+          <span className='user_icon d-flex justify-content-center align-items-center'>
+            <img src={userProfileIcon} alt='user-profile-icon' className='img-fluid' />
+          </span>
         </Col>
         <Col className='col-9'>
           <Row>

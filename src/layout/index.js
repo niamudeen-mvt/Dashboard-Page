@@ -8,13 +8,13 @@ const MainLayout = ({ children }) => {
   const windowSize = useWindowSize()
   const [isNavOpen, setIsNavOpen] = useState(true)
 
-  useEffect(() => {
-    if (windowSize?.width <= 1360) {
-      setIsNavOpen(false)
-    } else {
-      setIsNavOpen(true)
-    }
-  }, [windowSize?.width])
+  // useEffect(() => {
+  //   if (windowSize?.width <= 1360) {
+  //     setIsNavOpen(false)
+  //   } else {
+  //     setIsNavOpen(true)
+  //   }
+  // }, [windowSize?.width])
 
 
   return (

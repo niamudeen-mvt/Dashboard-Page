@@ -431,6 +431,7 @@ input::-moz-focus-inner {
 
 .custom_table_section .custom_table_container .coloumn_headings,
 .custom_table_section .custom_table_container .common_campaign_heading,
+.custom_table_section .custom_table_container .common_campaign_location,
 .custom_table_section .custom_table_container .common_campaign_date_heading,
 .custom_table_section .custom_table_container .campaign_status {
   padding: 13px 10px 13px 24px !important;
@@ -579,7 +580,7 @@ input::-moz-focus-inner {
 }
 
 .postcard_detail_section .design_section .design_card {
-  min-width: 331.61px;
+  max-width: 331.61px;
   min-height: 233.65px;
 }
 .postcard_detail_section .design_section .design_card h2 {
@@ -588,8 +589,8 @@ input::-moz-focus-inner {
   line-height: 41px;
 }
 .postcard_detail_section .design_section .design_card .tag {
-  min-width: 66px;
-  min-height: 24px;
+  width: 66px;
+  height: 24px;
   padding: 2px 4px;
   background-color: #e4e5e7;
   font-size: 12px;
@@ -708,13 +709,16 @@ input::-moz-focus-inner {
 .singin_page_section .top_heading {
   margin-bottom: 176.25px;
 }
+.singin_page_section .top_heading h3 {
+  color: var(--side-navigation-color);
+}
 .singin_page_section .top_heading h3 .notes {
   color: #6d7175 !important;
 }
 
 .signin_form_container .signin_form_wrapper {
   width: 556px;
-  height: 408px;
+  min-height: 408px;
   margin: 0 auto;
   box-shadow: 0px 46px 66px 0px rgba(0, 0, 0, 0.1);
   padding: 32px;
@@ -733,4 +737,22 @@ input::-moz-focus-inner {
 }
 .signin_form_container .signin_form_wrapper .form_input input {
   padding-left: 16px;
+}
+
+/* ====================== GRID ============================ */
+
+.postcard_img_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(331.61px, 1fr));
+  gap: 63px;
+}
+.postcard_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(233px, 1fr));
+  gap: 30px;
+}
+.setting_tab_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(233px, 1fr));
+  gap: 30px;
 }

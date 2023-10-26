@@ -10,8 +10,6 @@ const SideNaviagation = ({ isNavOpen }) => {
   const routeName = (useLocation()).pathname
   const subRoute = routeName?.substring(0, 19)
 
-  console.log(routeName, "routeName");
-  console.log(subRoute, "subroute")
 
   const sideNavigationStyles = {
     width: '17%',

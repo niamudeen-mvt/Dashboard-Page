@@ -30,8 +30,8 @@ const SignInForm = () => {
           </p>
         </div>
 
-        <div className='d-flex justify-content-center align-items-center flex-column signin_form_content'>
-          <div className='form_input w-100 border_radius_12 mb-3 d-flex justify-content-start align-items-center px-3 border' >
+        <div className='d-flex justify-content-center align-items-center flex-column signin_form_content '>
+          <div className='form_input w-100 border_radius_12 mb-3 d-flex justify-content-start align-items-center px-3 ' >
             <span className=''>
               <img src={emailIcon} alt='email-icon' className='img-fluid' />
             </span>
@@ -40,7 +40,7 @@ const SignInForm = () => {
               onChange={(e) => setUser({ ...user, email: e.target.value })}
             />
           </div>
-          <div className='form_input w-100 border_radius_12 mb-3 d-flex justify-content-start align-items-center px-3' >
+          <div className='form_input w-100 border_radius_12 d-flex justify-content-start align-items-center px-3 mb-5' >
             <span>
               <img src={passwordIcon} alt='password-icon' className='img-fluid' />
             </span>
@@ -49,7 +49,7 @@ const SignInForm = () => {
               onChange={(e) => setUser({ ...user, password: e.target.value })}
             />
           </div>
-          <div className='form_input border-0 border_radius_12 w-100'>
+          <div className='form_input border-0 border_radius_12 w-100 '>
             <button className='custom_theme_btn w-100 border_radius_12' onClick={handleSubmit}>
               Log In
             </button>

@@ -6,6 +6,7 @@ import SearchBar from '../search-bar'
 import { DisabledBadge, ProgressBadge, SuccessBadge } from '../shared/badges'
 import { customerDetailStatuslist } from '../../utils/constant/campaign-data'
 
+
 const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
 
 
@@ -59,7 +60,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
     <>
       <SearchBar query={query} setQuery={setQuery} statusList={customerDetailStatuslist} selectedFilterStatus={selectedFilterStatus} setSelectedFilterStatus={setSelectedFilterStatus} />
       <div className='custom_table_section'>
-        <div className='custom_table_container'>
+        <div className='custom_table_container mb-5'>
           <Table responsive className='table' >
             <thead>
               <tr>
@@ -68,7 +69,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                     coloumnData.map(coloumn => {
                       return (
                         <th key={coloumn?.id} className='coloumn_headings sf_pro_font_400w_12f' style={{
-                          minWidth: (coloumn?.id === 1 || coloumn?.id === 4) ? '243px' : (coloumn?.id === 2 ? '338px' : coloumn?.id === 3 ? '154px' : coloumn?.id === 6 ? '154px' : '')
+                          minWidth: (coloumn?.id === 1 || coloumn?.id === 4) ? '240px' : (coloumn?.id === 2 ? '338px' : coloumn?.id === 3 ? '154px' : coloumn?.id === 6 ? '100p x' : '240px')
                         }} >
                           {coloumn?.title}
                         </th>
@@ -120,7 +121,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                             {row?.createdOn}
                           </p>
                         </td>
-                        <td className='common_campaign_heading sf_pro_font_400w_14f'>
+                        <td className='common_campaign_location sf_pro_font_400w_14f'>
                           {row?.location}
                         </td>
                         <td className='common_campaign_heading sf_pro_font_400w_16f campaign_detail'>
