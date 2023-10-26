@@ -209,7 +209,6 @@ input::-moz-focus-inner {
   color: #161616;
 }
 .input_interfont_400w_16f {
-  font-family: Inter;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -306,16 +305,6 @@ input::-moz-focus-inner {
 }
 .setting_section {
   padding: 0 47px 0 42px;
-}
-.singin_page_section {
-  background-color: var(--soft-blue-theme);
-  padding-top: 95.75px;
-}
-.singin_page_section .top_heading h3 {
-  color: var(--side-navigation-color);
-}
-.singin_page_section .top_heading h3 .notes {
-  color: #6d7175 !important;
 }
 
 /* ============ search navbar =============== */
@@ -672,8 +661,8 @@ input::-moz-focus-inner {
 
 /* ================= settings ============ */
 .setting_section .setting_option {
-  min-width: 233px;
-  min-height: 86px;
+  width: 233px;
+  height: 86px;
   padding: 24px 41px 24px 16px;
   border: 1px solid #d7d7d7;
   background-color: #fff;
@@ -693,38 +682,55 @@ input::-moz-focus-inner {
   -o-border-radius: 50%;
 }
 
-/* =============== form container ============ */
-.form_container {
+/* =============== RESET PASSWORD FORM ============ */
+
+.reset_form_container {
   padding-top: 104px;
 }
-.form_container form {
+
+.reset_form_container .reset_form_wrapper {
   width: 492px;
   height: 380px;
   margin: 0 auto;
-  box-shadow: 0px 46px 66px 0px rgba(0, 0, 0, 0.1);
-  padding: 32px;
 }
 
-.form_container .signin_form {
-  min-width: 556px;
-  min-height: 408px;
+.reset_form_container .reset_form_wrapper .reset_form_content {
+  padding: 16px 21px;
+}
+
+/* ===================== SIGNIN PAGE ==========  */
+
+.singin_page_section {
+  background-color: var(--soft-blue-theme);
+  padding-top: 95.75px;
+}
+
+.singin_page_section .top_heading {
+  margin-bottom: 176.25px;
+}
+.singin_page_section .top_heading h3 .notes {
+  color: #6d7175 !important;
+}
+
+.signin_form_container .signin_form_wrapper {
+  width: 556px;
+  height: 408px;
   margin: 0 auto;
   box-shadow: 0px 46px 66px 0px rgba(0, 0, 0, 0.1);
   padding: 32px;
 }
-.form_container form .form_content {
+.signin_form_container .signin_form_wrapper .signin_form_content {
   padding: 18px;
 }
 
-.form_container form .form_input {
+.signin_form_container .signin_form_wrapper .form_input,
+.reset_form_container .reset_form_wrapper .reset_form_content .form_input {
   width: 450px;
   height: 56px;
   padding: 16px, 216px, 16px, 16px;
-  border: 1px solid #d0d5dd;
+  border: 1px solid #d0d5dd !important;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
-.form_container form .form_input input {
+.signin_form_container .signin_form_wrapper .form_input input {
   padding-left: 16px;
 }
-
-/* ================ signin form ============ */

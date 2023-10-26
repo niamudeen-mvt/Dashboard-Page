@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import MainLayout from '../layout/index'
 import { Outlet, useNavigate } from 'react-router-dom'
+import SignInPage from '../view/forms/signin'
 
 const ProtectedRoute = ({ children }) => {
 
@@ -23,7 +24,7 @@ const ProtectedRoute = ({ children }) => {
               {children}
             </Outlet>
           </MainLayout> :
-          <h1>Unprotected Route</h1>
+          <SignInPage />
       }
     </>
   )

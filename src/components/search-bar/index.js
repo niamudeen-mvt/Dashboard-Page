@@ -10,7 +10,7 @@ const SearchBar = ({ query, setQuery, statusList, selectedFilterStatus, setSelec
       <nav className="navbar navbar-expand-lg bg-body-tertiary ">
         <div className="container-fluid">
           {
-            routeName === "/campaign" ?
+            routeName === "/dashboard/campaign" ?
               <a className="navbar-brand sf_pro_font_700" href="#">All Campaigns</a>
               : null
           }
