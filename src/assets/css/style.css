@@ -263,9 +263,8 @@ input::-moz-focus-inner {
 
 /* ============= Container ================ */
 
-.container {
-  max-width: 1489.33px;
-  padding: 0;
+.section_container {
+  padding: 0 19.61px;
 }
 
 /* ============ search navbar =============== */
@@ -361,6 +360,11 @@ input::-moz-focus-inner {
 }
 
 /* ============== main container ============ */
+.main_container {
+  /* border: 2px solid red; */
+  padding: 0 16px 0 9px;
+}
+
 .main_container,
 .main_layout {
   background-color: var(--soft-blue-theme);
@@ -372,7 +376,9 @@ input::-moz-focus-inner {
 
 /* ============ table section ===================== */
 .custom_table_section {
+  max-width: 1387px;
   max-height: 531px;
+  margin: 0 auto;
 }
 
 .custom_table_section .custom_table_container {
@@ -442,6 +448,7 @@ input::-moz-focus-inner {
 }
 
 /* ================ campagin details ============== */
+
 .campaign_detail_section,
 .postcard_detail_section {
   padding: 41px 34px;

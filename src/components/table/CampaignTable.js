@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { campaignColumnData, campaignRowData } from '../../utils/constant/campaign-data'
 import Pagination from '../pagination/Pagination'
 import { DisabledBadge, SuccessBadge } from '../shared/badges'
-import SearchBar from '../navbar'
+import SearchBar from '../search-bar'
 import { campaignStatusList } from '../../utils/constant/campaign-data'
 
 const CampaignTable = () => {
@@ -22,13 +22,13 @@ const CampaignTable = () => {
   const startIndex = endIndex - itemPerPage
 
 
+
   // ===================== filter functionality ==============
   useEffect(() => {
-    if (selectedFilterStatus !== "" && selectedFilterStatus !== "All") {
-      let upadatedList = campaignRowData?.filter(row => row?.status === selectedFilterStatus)
+    if ((selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter")) {
+      let upadatedList = campaignRowData?.filter(row => row?.status === (selectedFilterStatus))
       setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
     } else {
-      // setting it to default 
       setUpdatedRowList(campaignRowData.slice(startIndex, endIndex))
     }
   }, [selectedFilterStatus, startIndex, endIndex])

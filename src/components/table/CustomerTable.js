@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import Pagination from '../pagination/Pagination'
-import SearchBar from '../navbar'
+import SearchBar from '../search-bar'
 import { DisabledBadge, ProgressBadge, SuccessBadge } from '../shared/badges'
 import { customerDetailStatuslist } from '../../utils/constant/campaign-data'
 
@@ -32,11 +32,10 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
 
   // ===================== filter functionality ==============
   useEffect(() => {
-    if (selectedFilterStatus !== "" && selectedFilterStatus !== "All") {
+    if ((selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter")) {
       let upadatedList = rowData?.filter(row => row?.status === selectedFilterStatus)
       setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
     } else {
-      // setting it to default 
       setUpdatedRowList(rowData.slice(startIndex, endIndex))
     }
   }, [selectedFilterStatus, startIndex, endIndex])
