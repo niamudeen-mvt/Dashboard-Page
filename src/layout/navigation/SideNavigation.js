@@ -17,7 +17,6 @@ const SideNaviagation = ({ isNavOpen }) => {
   }
 
   const handleLogout = () => {
-    localStorage.removeItem('user')
     navigate("/signin")
   }
 

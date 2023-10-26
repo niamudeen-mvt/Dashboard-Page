@@ -12,11 +12,22 @@ const SignInForm = () => {
     password: ""
   })
 
+  let adminUser = JSON.parse(localStorage.getItem('user'))
+  console.log(adminUser, "adminuser");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (user?.email !== "" && user?.password !== "") {
+      // if (user?.email === adminUser?.email && user?.password === adminUser?.password) {
+      //   localStorage.setItem('user', JSON.stringify(user))
+      //   navigate("/dashboard/campaign")
+      // } else {
+      //   alert("You are not admin.")
+      // }
       localStorage.setItem('user', JSON.stringify(user))
       navigate("/dashboard/campaign")
+    } else {
+      alert("All the fields are required")
     }
   }
   return (
