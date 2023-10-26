@@ -17,13 +17,13 @@ export const menuItems = [
     icon: campaignIcon,
     activeIcon: campaignActiveIcon
   },
-  {
-    id: 'customer',
-    title: 'Customer',
-    url: '/dashboard/customer',
-    icon: contactIcon,
-    activeIcon: contactActiveIcon
-  },
+  // {
+  //   id: 'customer',
+  //   title: 'Customer',
+  //   url: '/dashboard/customer',
+  //   icon: contactIcon,
+  //   activeIcon: contactActiveIcon
+  // },
   {
     id: 'contacts',
     title: 'Contacts',

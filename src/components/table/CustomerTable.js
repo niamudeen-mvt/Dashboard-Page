@@ -132,9 +132,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                       </tr>
                     )
                   }) :
-                  <div className='w-50 position-absolute text-center'>
-                    <p className='sf_pro_font_400w_12f p-0'>No Data to Display</p>
-                  </div>
+                  null
               }
             </tbody>
           </Table>
