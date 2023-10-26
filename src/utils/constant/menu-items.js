@@ -13,35 +13,35 @@ export const menuItems = [
   {
     id: 'campaign',
     title: 'Campaign',
-    url: '/campaign',
+    url: '/dashboard/campaign',
     icon: campaignIcon,
     activeIcon: campaignActiveIcon
   },
   {
     id: 'customer',
     title: 'Customer',
-    url: '/customer',
+    url: '/dashboard/customer',
     icon: contactIcon,
     activeIcon: contactActiveIcon
   },
   {
     id: 'contacts',
     title: 'Contacts',
-    url: '/contacts',
+    url: '/dashboard/contacts',
     icon: contactIcon,
     activeIcon: contactActiveIcon
   },
   {
     id: 'overview',
     title: 'Overview',
-    url: '/overview',
+    url: '/dashboard/overview',
     icon: overViewIcon,
     activeIcon: overviewActiveIcon
   },
   {
     id: 'settings',
     title: 'Settings',
-    url: '/settings',
+    url: '/dashboard/settings',
     icon: settingIcon,
     activeIcon: settingsActiveIcon
   },

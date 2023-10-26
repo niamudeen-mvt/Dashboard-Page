@@ -56,7 +56,7 @@ const CampaignDetail = () => {
           </Row>
         </div>
         <div className='d-flex justify-content-end align-content-end'>
-          <Link className='sf_pro_text_500w_14f common_link_color' to="/campaign/customers">
+          <Link className='sf_pro_text_500w_14f common_link_color' to="/dashboard/campaign/customers">
             See all customers details
           </Link>
         </div>

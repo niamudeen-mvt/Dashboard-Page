@@ -1,19 +1,26 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import logoutBtn from "../../assets/icons/logout-icon.svg"
 import { menuItems } from '../../utils/constant/menu-items'
 
 
 
 const SideNaviagation = ({ isNavOpen }) => {
-
+  const navigate = useNavigate()
   const routeName = (useLocation()).pathname
-  const subRoute = routeName?.substring(0, 9)
+  const subRoute = routeName?.substring(0, 19)
 
+  console.log(routeName, "routeName");
+  console.log(subRoute, "subroute")
 
   const sideNavigationStyles = {
     width: '17%',
     marginBottom: '4px'
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('user')
+    navigate("/signin")
   }
 
   // const sideNavigationStyles = {
@@ -53,7 +60,7 @@ const SideNaviagation = ({ isNavOpen }) => {
               </div>
             </div>
             <div className='bottom_section d-flex justify-content-start align-items-center position-absolute py-5'>
-              <button className='d-flex justify-content-start align-items-center mx-4'>
+              <button className='d-flex justify-content-start align-items-center mx-4' onClick={handleLogout}>
                 <span className='mx-3'>
                   <img src={logoutBtn} alt="logout-btn-icon" />
                 </span>

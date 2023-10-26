@@ -106,7 +106,7 @@ const CampaignTable = () => {
                           {row?.stopDate}
                         </td>
                         <td className='common_campaign_heading sf_pro_font_400w_16f campaign_detail'>
-                          <Link to={`/campaign/${index + 1}`}>
+                          <Link to={`/dashboard/campaign/${index + 1}`}>
                             {row?.action}
                           </Link>
                         </td>

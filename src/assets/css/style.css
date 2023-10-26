@@ -58,6 +58,12 @@ select:focus {
   outline: none;
   box-shadow: none;
 }
+input {
+  /* height: 100%;
+  width: 100%; */
+  background-color: transparent;
+  border: none;
+}
 
 input::-moz-focus-inner {
   border: 0;
@@ -100,6 +106,13 @@ input::-moz-focus-inner {
   -moz-border-radius: 26px;
   -ms-border-radius: 26px;
   -o-border-radius: 26px;
+}
+.border_radius_16 {
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
 }
 
 /* ========================= SF PRO DISPLAY FONT =================== */
@@ -152,6 +165,12 @@ input::-moz-focus-inner {
   line-height: 24px;
   color: #202223;
 }
+.sf_pro_font_700w_42f {
+  font-family: SF Pro Display;
+  font-size: 42px;
+  font-weight: 700;
+  color: #202223;
+}
 
 /* ================== SF PRO TEXT ================== */
 
@@ -188,6 +207,19 @@ input::-moz-focus-inner {
   font-weight: 500;
   line-height: 20px;
   color: #161616;
+}
+.input_interfont_400w_16f {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #afb3b6 !important;
+}
+
+.interfont_32f_700w {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 41.6px;
 }
 
 /* =========================== common classes =================== */
@@ -274,6 +306,16 @@ input::-moz-focus-inner {
 }
 .setting_section {
   padding: 0 47px 0 42px;
+}
+.singin_page_section {
+  background-color: var(--soft-blue-theme);
+  padding-top: 95.75px;
+}
+.singin_page_section .top_heading h3 {
+  color: var(--side-navigation-color);
+}
+.singin_page_section .top_heading h3 .notes {
+  color: #6d7175 !important;
 }
 
 /* ============ search navbar =============== */
@@ -636,8 +678,7 @@ input::-moz-focus-inner {
   border: 1px solid #d7d7d7;
   background-color: #fff;
 }
-
-.setting_section .setting_option:hover {
+.active_setting_tab {
   box-shadow: 0px 7px 0px 0px var(--side-navigation-color);
 }
 
@@ -651,3 +692,39 @@ input::-moz-focus-inner {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
+/* =============== form container ============ */
+.form_container {
+  padding-top: 104px;
+}
+.form_container form {
+  width: 492px;
+  height: 380px;
+  margin: 0 auto;
+  box-shadow: 0px 46px 66px 0px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+.form_container .signin_form {
+  min-width: 556px;
+  min-height: 408px;
+  margin: 0 auto;
+  box-shadow: 0px 46px 66px 0px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+.form_container form .form_content {
+  padding: 18px;
+}
+
+.form_container form .form_input {
+  width: 450px;
+  height: 56px;
+  padding: 16px, 216px, 16px, 16px;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.form_container form .form_input input {
+  padding-left: 16px;
+}
+
+/* ================ signin form ============ */

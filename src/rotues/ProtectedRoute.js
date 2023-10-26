@@ -8,9 +8,9 @@ const ProtectedRoute = ({ children }) => {
   // consider user is authenticated
   let isAuthenticated = true
 
-  useEffect(() => {
-    navigate("/campaign")
-  }, [])
+  // useEffect(() => {
+  //   navigate("/campaign")
+  // }, [])
 
 
 

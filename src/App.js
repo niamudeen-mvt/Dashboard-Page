@@ -7,13 +7,15 @@ import OverviewPage from './view/overview'
 import SettingsPage from './view/settings'
 import CampaignDetail from './view/campaign/CampaignDetail'
 import CustomerPage from './view/customer'
+import SignInPage from './view/forms/signin'
 
 const App = () => {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ProtectedRoute />}>
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/dashboard" element={<ProtectedRoute />}>
           <Route path="campaign" element={<CampaignPage />} />
           <Route path="campaign/:id" element={<CampaignDetail />} />
           <Route path="campaign/customers" element={<CustomerPage />} />
