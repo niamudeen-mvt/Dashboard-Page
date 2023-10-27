@@ -46,7 +46,7 @@ const CampaignTable = () => {
         let upadatedList = campaignRowData?.filter(row => {
           return row.campaignName?.toLowerCase().includes(query.toLowerCase())
         })
-        setUpdatedRowList(upadatedList)
+        setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
       } else {
         // if query is empty 
         setUpdatedRowList(campaignRowData.slice(startIndex, endIndex))

@@ -57,7 +57,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
         let upadatedList = rowDataList?.filter(row => {
           return row.customer?.toLowerCase().includes(query.toLowerCase())
         })
-        setUpdatedRowList(upadatedList)
+        setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
       } else {
         // if query is empty 
         setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
