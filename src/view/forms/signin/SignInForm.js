@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import emailIcon from "../../../assets/icons/email-icon.svg"
 import passwordIcon from "../../../assets/icons/password.svg"
 import { useNavigate } from 'react-router-dom'
@@ -20,6 +20,7 @@ const SignInForm = () => {
       email: authUser?.email,
       password: authUser?.password
     })
+
     console.log(isFieldsEmpty, "isFieldsEmpty");
     if (!isFieldsEmpty) {
       setAuthUser({ ...authUser, isLoggedIn: true })
@@ -31,6 +32,7 @@ const SignInForm = () => {
   return (
     <div className='signin_form_container' >
       <form className='bg-white border_radius_16 signin_form_wrapper'>
+
         <div className='text-center mb-4'>
           <h2 className='sf_pro_font_700w_42f'>Welcome Back</h2>
           <p className='sf_pro_text_400w_12f'>

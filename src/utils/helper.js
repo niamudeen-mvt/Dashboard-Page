@@ -48,6 +48,6 @@ export const downloadCustomerDetail = (tableID, filename = '') => {
 }
 
 export const checkIfObjFieldsEmpty = (obj) => {
-  let isEmpty = Object.keys(obj).some(e => obj[e] == "")
+  let isEmpty = Object.keys(obj).some(e => obj[e] === "")
   return isEmpty
 }
