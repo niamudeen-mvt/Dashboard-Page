@@ -32,41 +32,44 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
   const startIndex = endIndex - itemPerPage
 
 
-  const fitlerQuery = (query) => {
-    if (query?.length > 0) {
-      let upadatedList = rowDataList?.filter(row => {
-        return row.customer?.toLowerCase().includes(query.toLowerCase())
-      })
-      setUpdatedRowList(upadatedList)
-    } else {
-      setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
-    }
-  }
 
-  // ===================== filter functionality ==============
-  useEffect(() => {
-    if ((selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter")) {
+  const filterAndSearchQuery = () => {
+    if (selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter") {
+
       if (query?.length > 0) {
+
+        //  if query and status both exist 
         let upadatedList = rowDataList?.filter(row => {
           return row.customer?.toLowerCase().includes(query.toLowerCase()) && row?.status === (selectedFilterStatus)
         })
         setUpdatedRowList(upadatedList)
       } else {
-        let upadatedList = rowDataList?.filter(row => row?.status === selectedFilterStatus)
+
+        // if status is selected
+        let upadatedList = rowDataList?.filter(row => row?.status === (selectedFilterStatus))
         setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
       }
 
+
     } else {
-      fitlerQuery(query)
+      if (query?.length > 0) {
+        // if query exist
+        let upadatedList = rowDataList?.filter(row => {
+          return row.customer?.toLowerCase().includes(query.toLowerCase())
+        })
+        setUpdatedRowList(upadatedList)
+      } else {
+        // if query is empty 
+        setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
+      }
     }
-  }, [selectedFilterStatus, startIndex, endIndex])
+  }
 
-
-  // ============== search functionlaity ======================
 
   useEffect(() => {
-    fitlerQuery(query)
-  }, [query])
+    filterAndSearchQuery()
+  }, [query, selectedFilterStatus, startIndex, endIndex])
+
 
 
   return (
