@@ -337,8 +337,9 @@ input::-moz-focus-inner {
 .navbar .filter_container .dropdown-menu .dropdown-item {
   color: #030303;
 }
-.navbar .filter_container .dropdown-menu .dropdown-item:hover {
-  color: white;
+.navbar .filter_container .dropdown-menu .dropdown-item:hover,
+.common_campaign_heading .dropdown-menu .dropdown-item:hover {
+  color: white !important;
 }
 
 .navbar .filter_container .dropdown-menu,

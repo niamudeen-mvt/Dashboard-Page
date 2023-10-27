@@ -125,7 +125,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                                       customerDetailStatuslist?.length ?
                                         customerDetailStatuslist?.filter(e => e !== "All").map((e) => {
                                           return (
-                                            <li key={e}><a className="dropdown-item" href="#" onClick={(e) => handleSelectStatus(e, index)} >{e}</a></li>
+                                            <li key={e}><a className="dropdown-item text-black" href="#" onClick={(e) => handleSelectStatus(e, index)} >{e}</a></li>
                                           )
                                         }) : null
                                     }
