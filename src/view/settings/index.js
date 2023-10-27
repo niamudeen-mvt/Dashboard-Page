@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Row, Col } from "reactstrap"
 import SectionHeading from '../../components/shared/SectionHeading'
 import UserProfile from '../../components/profile/UserProfile'
 import settingIcon from "../../assets/icons/setting-blue-icon.svg"

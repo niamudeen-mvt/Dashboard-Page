@@ -31,20 +31,8 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
   const endIndex = currentPage * itemPerPage
   const startIndex = endIndex - itemPerPage
 
-  // ===================== filter functionality ==============
-  useEffect(() => {
-    if ((selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter")) {
-      let upadatedList = rowData?.filter(row => row?.status === selectedFilterStatus)
-      setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
-    } else {
-      setUpdatedRowList(rowData.slice(startIndex, endIndex))
-    }
-  }, [selectedFilterStatus, startIndex, endIndex])
 
-
-  // ============== search functionlaity ======================
-
-  useEffect(() => {
+  const fitlerQuery = (query) => {
     if (query?.length > 0) {
       let upadatedList = rowDataList?.filter(row => {
         return row.customer?.toLowerCase().includes(query.toLowerCase())
@@ -53,17 +41,42 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
     } else {
       setUpdatedRowList(rowDataList.slice(startIndex, endIndex))
     }
+  }
+
+  // ===================== filter functionality ==============
+  useEffect(() => {
+    if ((selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter")) {
+      if (query?.length > 0) {
+        let upadatedList = rowDataList?.filter(row => {
+          return row.customer?.toLowerCase().includes(query.toLowerCase()) && row?.status === (selectedFilterStatus)
+        })
+        setUpdatedRowList(upadatedList)
+      } else {
+        let upadatedList = rowDataList?.filter(row => row?.status === selectedFilterStatus)
+        setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
+      }
+
+    } else {
+      fitlerQuery(query)
+    }
+  }, [selectedFilterStatus, startIndex, endIndex])
+
+
+  // ============== search functionlaity ======================
+
+  useEffect(() => {
+    fitlerQuery(query)
   }, [query])
 
 
   return (
     <>
-      <SearchBar query={query} setQuery={setQuery} statusList={customerDetailStatuslist} selectedFilterStatus={selectedFilterStatus} setSelectedFilterStatus={setSelectedFilterStatus} />
+      <SearchBar query={query} setQuery={setQuery} statusList={customerDetailStatuslist} selectedFilterStatus={selectedFilterStatus} setSelectedFilterStatus={setSelectedFilterStatus} placeholder="Search Customers" />
       <div className='custom_table_section'>
         <div className='custom_table_container mb-5'>
           {
             updatedRowList?.length ?
-              <Table responsive className='table' >
+              <Table responsive className='table' borderless>
                 <thead>
                   <tr>
                     {
@@ -71,7 +84,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                         coloumnData.map(coloumn => {
                           return (
                             <th key={coloumn?.id} className='coloumn_headings sf_pro_font_400w_12f' style={{
-                              minWidth: (coloumn?.id === 1 || coloumn?.id === 4) ? '240px' : (coloumn?.id === 2 ? '338px' : coloumn?.id === 3 ? '154px' : coloumn?.id === 6 ? '100p x' : '240px')
+                              minWidth: (coloumn?.id === 1 || coloumn?.id === 4) ? '240px' : (coloumn?.id === 2 ? '330px' : coloumn?.id === 3 ? '160px' : coloumn?.id === 6 ? '100px' : '240px')
                             }} >
                               {coloumn?.title}
                             </th>
@@ -127,8 +140,8 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                             <td className='common_campaign_location sf_pro_font_400w_14f'>
                               {row?.location}
                             </td>
-                            <td className='common_campaign_heading sf_pro_font_400w_16f campaign_detail'>
-                              <Link to="#" onClick={handleCustomerDetail}>
+                            <td className='common_campaign_heading  '>
+                              <Link to="#" onClick={handleCustomerDetail} className='sf_pro_font_400w_16f campaign_action_link'>
                                 {row?.action}
                               </Link>
                             </td>
@@ -145,7 +158,7 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
               </div>
           }
         </div>
-        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} rowDataList={rowDataList} itemPerPage={itemPerPage} totalPages={totalPages} />
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} rowDataList={updatedRowList} itemPerPage={itemPerPage} totalPages={totalPages} />
       </div >
     </>
   )

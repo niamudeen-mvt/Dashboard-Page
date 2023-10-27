@@ -3,7 +3,7 @@ import SectionHeading from '../../components/shared/SectionHeading'
 
 const OverviewPage = () => {
   return (
-    <div className='common_section_margin'>
+    <div className='common_section_margin overview_section'>
       <SectionHeading mainHeading="Overview Page" />
     </div>
   )

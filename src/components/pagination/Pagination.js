@@ -4,6 +4,9 @@ import rightIcon from "../../assets/icons/right-arrow-icon.svg"
 
 const Pagination = ({ currentPage, setCurrentPage, rowDataList, itemPerPage, totalPages }) => {
 
+  // total pages = 21
+  // item per page = 7 
+
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
@@ -11,7 +14,7 @@ const Pagination = ({ currentPage, setCurrentPage, rowDataList, itemPerPage, tot
   }
 
   const handleNextPage = () => {
-    if (((currentPage * itemPerPage) < totalPages) && rowDataList?.length > 0) {
+    if (((currentPage * itemPerPage) < totalPages) && rowDataList?.length >= itemPerPage) {
       setCurrentPage(currentPage + 1)
     }
   }

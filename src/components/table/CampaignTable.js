@@ -22,21 +22,7 @@ const CampaignTable = () => {
   const startIndex = endIndex - itemPerPage
 
 
-
-  // ===================== filter functionality ==============
-  useEffect(() => {
-    if ((selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter")) {
-      let upadatedList = campaignRowData?.filter(row => row?.status === (selectedFilterStatus))
-      setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
-    } else {
-      setUpdatedRowList(campaignRowData.slice(startIndex, endIndex))
-    }
-  }, [selectedFilterStatus, startIndex, endIndex])
-
-
-  // ============== search functionlaity ======================
-
-  useEffect(() => {
+  const fitlerQuery = (query) => {
     if (query?.length > 0) {
       let upadatedList = campaignRowData?.filter(row => {
         return row.campaignName?.toLowerCase().includes(query.toLowerCase())
@@ -45,6 +31,32 @@ const CampaignTable = () => {
     } else {
       setUpdatedRowList(campaignRowData.slice(startIndex, endIndex))
     }
+  }
+
+
+  // ===================== filter functionality ==============
+  useEffect(() => {
+    if ((selectedFilterStatus !== "" && selectedFilterStatus !== "All" && selectedFilterStatus !== "Filter")) {
+
+      if (query?.length > 0) {
+        let upadatedList = campaignRowData?.filter(row => {
+          return row.campaignName?.toLowerCase().includes(query.toLowerCase()) && row?.status === (selectedFilterStatus)
+        })
+        setUpdatedRowList(upadatedList)
+      } else {
+        let upadatedList = campaignRowData?.filter(row => row?.status === (selectedFilterStatus))
+        setUpdatedRowList(upadatedList.slice(startIndex, endIndex))
+      }
+    } else {
+      fitlerQuery(query)
+    }
+  }, [selectedFilterStatus, startIndex, endIndex])
+
+
+  // ============== search functionlaity ======================
+
+  useEffect(() => {
+    fitlerQuery(query)
   }, [query])
 
 
@@ -107,8 +119,8 @@ const CampaignTable = () => {
                             <td className='common_campaign_date_heading sf_pro_font_400w_16f'>
                               {row?.stopDate}
                             </td>
-                            <td className='common_campaign_heading sf_pro_font_400w_16f campaign_detail'>
-                              <Link to={`/dashboard/campaign/${index + 1}`}>
+                            <td className='common_campaign_heading'>
+                              <Link to={`/dashboard/campaign/${index + 1}`} className='campaign_action_link sf_pro_font_400w_16f'>
                                 {row?.action}
                               </Link>
                             </td>
