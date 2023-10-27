@@ -7,9 +7,10 @@ const CampaignTable = ({ rowData, coloumnData }) => {
   return (
     <div className='custom_table_section'>
       <div className='custom_table_container pb-0' style={{
-        border: '1px solid #DBDBDB'
+        border: '1px solid #DBDBDB',
+        minHeight: '113px'
       }}>
-        <Table responsive className='table' id="customer_table_detail">
+        <Table responsive className='table' id="customer_table_detail" >
           <thead>
             <tr>
               {
