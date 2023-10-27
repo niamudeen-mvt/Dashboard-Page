@@ -434,9 +434,11 @@ input::-moz-focus-inner {
 .custom_table_section .custom_table_container .coloumn_headings,
 .custom_table_section .custom_table_container .common_campaign_heading,
 .custom_table_section .custom_table_container .common_campaign_location,
-.custom_table_section .custom_table_container .common_campaign_date_heading,
-.custom_table_section .custom_table_container .campaign_status {
+.custom_table_section .custom_table_container .common_campaign_date_heading {
   padding: 13px 10px 13px 24px !important;
+}
+.custom_table_section .custom_table_container .campaign_status {
+  padding: 13px 10px 13px 10px !important;
 }
 
 .custom_table_section .custom_table_container table {

@@ -99,7 +99,7 @@ const CampaignTable = () => {
                             <td className='common_campaign_heading sf_pro_font_400w_16f'>
                               {row?.storeName}
                             </td>
-                            <td >
+                            <td className='campaign_status'>
                               {
                                 row?.status === 'On Going' ?
                                   <SuccessBadge content={row?.status} />
