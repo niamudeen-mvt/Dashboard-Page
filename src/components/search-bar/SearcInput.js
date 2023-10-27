@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import searchIcon from "../../assets/icons/search-icon.svg"
 
 
 const SearchInput = ({ query, setQuery }) => {
-
-  console.log(query, "query");
 
   const handleChange = (e) => {
     setQuery(e.target.value)

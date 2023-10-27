@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import logoutBtn from "../../assets/icons/logout-icon.svg"
 import { menuItems } from '../../utils/constant/menu-items'
+import { useAuth } from '../../context/authContext'
 
 
 
@@ -10,6 +11,8 @@ const SideNaviagation = ({ isNavOpen }) => {
   const routeName = (useLocation()).pathname
   const subRoute = routeName?.substring(0, 19)
 
+  const { logout } = useAuth()
+
 
   const sideNavigationStyles = {
     width: '17%',
@@ -17,8 +20,10 @@ const SideNaviagation = ({ isNavOpen }) => {
   }
 
   const handleLogout = () => {
+    logout()
     navigate("/signin")
   }
+
 
   // const sideNavigationStyles = {
   //   position: 'absolute',

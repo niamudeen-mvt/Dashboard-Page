@@ -1,30 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import emailIcon from "../../../assets/icons/email-icon.svg"
 import passwordIcon from "../../../assets/icons/password.svg"
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../../context/authContext'
+import { checkIfObjFieldsEmpty } from '../../../utils/helper'
 
 
 const SignInForm = () => {
+  const { authUser, setAuthUser } = useAuth()
 
   const navigate = useNavigate()
-  const [user, setUser] = useState({
-    email: "js@gmail.com",
-    password: "123"
-  })
 
-  // let adminUser = JSON.parse(localStorage.getItem('user'))
-  // console.log(adminUser, "adminuser");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (user?.email !== "" && user?.password !== "") {
-      // if (user?.email === adminUser?.email && user?.password === adminUser?.password) {
-      //   localStorage.setItem('user', JSON.stringify(user))
-      //   navigate("/dashboard/campaign")
-      // } else {
-      //   alert("You are not admin.")
-      // }
-      localStorage.setItem('user', JSON.stringify(user))
+
+
+    let isFieldsEmpty = checkIfObjFieldsEmpty({
+      email: authUser?.email,
+      password: authUser?.password
+    })
+    console.log(isFieldsEmpty, "isFieldsEmpty");
+    if (!isFieldsEmpty) {
+      setAuthUser({ ...authUser, isLoggedIn: true })
       navigate("/dashboard/campaign")
     } else {
       alert("All the fields are required")
@@ -46,8 +44,8 @@ const SignInForm = () => {
               <img src={emailIcon} alt='email-icon' className='img-fluid' />
             </span>
             <input type='email' placeholder='Email' className='input_interfont_400w_16f '
-              value={user?.email}
-              onChange={(e) => setUser({ ...user, email: e.target.value })}
+              value={authUser?.email}
+              onChange={(e) => setAuthUser({ ...authUser, email: e.target.value })}
             />
           </div>
           <div className='form_input w-100 border_radius_12 d-flex justify-content-start align-items-center px-3 mb-5' >
@@ -55,8 +53,8 @@ const SignInForm = () => {
               <img src={passwordIcon} alt='password-icon' className='img-fluid' />
             </span>
             <input type='password' placeholder='Password' className='input_interfont_400w_16f'
-              value={user?.password}
-              onChange={(e) => setUser({ ...user, password: e.target.value })}
+              value={authUser?.password}
+              onChange={(e) => setAuthUser({ ...authUser, password: e.target.value })}
             />
           </div>
           <div className='form_input border-0 border_radius_12 w-100 '>
