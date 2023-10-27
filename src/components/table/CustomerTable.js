@@ -97,18 +97,19 @@ const CustomerTable = ({ coloumnData, rowData, setShowCustomerDetail }) => {
                             </td>
                             <td className={`common_campaign_heading`} >
                               <div className='sf_pro_font_400w_12f'>
-                                <div class="dropdown">
-                                  <button class="dropdown-toggle w-100 d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div className="dropdown">
+                                  <button className={`${selectedFilterStatus === "Filter" ? 'dropdown-toggle' : ''} w-100 d-flex`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {
                                       row?.status === 'Sent Out' ? <DisabledBadge content={row?.status} /> : row?.status === 'Scheduled' ? <ProgressBadge content={row?.status} /> : <SuccessBadge content={row?.status} />
                                     }
                                   </button>
-                                  <ul class="dropdown-menu">
+
+                                  <ul className="dropdown-menu">
                                     {
                                       customerDetailStatuslist?.length ?
                                         customerDetailStatuslist?.filter(e => e !== "All").map((e) => {
                                           return (
-                                            <li key={e}><a class="dropdown-item" href="#" onClick={(e) => handleSelectStatus(e, index)} >{e}</a></li>
+                                            <li key={e}><a className="dropdown-item" href="#" onClick={(e) => handleSelectStatus(e, index)} >{e}</a></li>
                                           )
                                         }) : null
                                     }

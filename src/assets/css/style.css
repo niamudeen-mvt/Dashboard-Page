@@ -340,11 +340,16 @@ input::-moz-focus-inner {
 .navbar .filter_container .dropdown-menu .dropdown-item {
   color: #030303;
 }
+.navbar .filter_container .dropdown-menu .dropdown-item:hover {
+  color: white;
+}
 
 .navbar .filter_container .dropdown-menu,
 .dropdown-menu {
   min-width: 136.25px;
-  --bs-dropdown-link-hover-bg: var(--soft-blue-theme);
+  color: var(--white-color);
+  --bs-dropdown-link-color: var(--white-color);
+  --bs-dropdown-link-hover-bg: var(--side-navigation-color);
   --bs-dropdown-link-active-bg: var(--soft-blue-theme);
 }
 

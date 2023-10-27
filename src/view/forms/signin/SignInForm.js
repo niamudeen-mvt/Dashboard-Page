@@ -8,12 +8,12 @@ const SignInForm = () => {
 
   const navigate = useNavigate()
   const [user, setUser] = useState({
-    email: "",
-    password: ""
+    email: "js@gmail.com",
+    password: "123"
   })
 
-  let adminUser = JSON.parse(localStorage.getItem('user'))
-  console.log(adminUser, "adminuser");
+  // let adminUser = JSON.parse(localStorage.getItem('user'))
+  // console.log(adminUser, "adminuser");
 
   const handleSubmit = (e) => {
     e.preventDefault();
